@@ -82,8 +82,14 @@ agdb:Field rdf:type owl:Class ;
            rdfs:subClassOf agdb:FarmyardSpace .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#GameMarker
+agdb:GameMarker rdf:type owl:Class ;
+                rdfs:comment "The various physical tokens (excluding room and field tiles) used in the game." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#GoodsAndFood
 agdb:GoodsAndFood rdf:type owl:Class ;
+                  rdfs:subClassOf agdb:GameMarker ;
                   owl:disjointWith agdb:PlayerToken ;
                   rdfs:comment "Individuals in this class represent the tokens for animals, resources, and food. There are no quantity limits on these tokens. Note: in the revised version of the game, food also counts as a good." .
 
@@ -140,6 +146,7 @@ agdb:PlayerCountActionSpace rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayerToken
 agdb:PlayerToken rdf:type owl:Class ;
+                 rdfs:subClassOf agdb:GameMarker ;
                  rdfs:comment "The colored game pieces given to each player during game set up. These represent fixed quantities." .
 
 
