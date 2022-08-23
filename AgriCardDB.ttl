@@ -344,6 +344,12 @@ agdb:DLSpace rdf:type owl:NamedIndividual ,
              rdfs:label "Day Laborer" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#E
+agdb:E rdf:type owl:NamedIndividual ,
+                agdb:PublishedDeck ;
+       rdfs:label "E Deck" .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#EmptyField
 agdb:EmptyField rdf:type owl:NamedIndividual ,
                          agdb:Field .
@@ -405,6 +411,38 @@ agdb:Food rdf:type owl:NamedIndividual ,
                    agdb:GoodsAndFood .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Fr
+agdb:Fr rdf:type owl:NamedIndividual ,
+                 agdb:PublishedDeck ;
+        rdfs:label "France Deck" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#G
+agdb:G rdf:type owl:NamedIndividual ,
+                agdb:PublishedDeck ;
+       rdfs:label "Gamer Deck" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#G4
+agdb:G4 rdf:type owl:NamedIndividual ,
+                 agdb:UnofficialDeck .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#G5
+agdb:G5 rdf:type owl:NamedIndividual ,
+                 agdb:UnofficialDeck .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#G6
+agdb:G6 rdf:type owl:NamedIndividual ,
+                 agdb:UnofficialDeck .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#G7
+agdb:G7 rdf:type owl:NamedIndividual ,
+                 agdb:UnofficialDeck .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Grain
 agdb:Grain rdf:type owl:NamedIndividual ,
                     agdb:Crop .
@@ -432,6 +470,18 @@ agdb:HarvestFeedingPhase rdf:type owl:NamedIndividual ,
 agdb:HarvestFieldPhase rdf:type owl:NamedIndividual ,
                                 agdb:HarvestPhase ;
                        rdfs:comment "The first phase of a harvest. Many card effects resolve during this phase. Fields are harvested." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#I
+agdb:I rdf:type owl:NamedIndividual ,
+                agdb:PublishedDeck ;
+       rdfs:label "I Deck" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#K
+agdb:K rdf:type owl:NamedIndividual ,
+                agdb:PublishedDeck ;
+       rdfs:label "K Deck" .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#MajorMinorSpace
@@ -622,6 +672,12 @@ agdb:Vegetable rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#WildBoar
 agdb:WildBoar rdf:type owl:NamedIndividual ,
                        agdb:Animal .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Wm
+agdb:Wm rdf:type owl:NamedIndividual ,
+                 agdb:PublishedDeck ;
+        rdfs:label "World Championship Deck" .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Wood
