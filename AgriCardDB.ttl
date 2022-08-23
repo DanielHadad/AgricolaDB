@@ -257,6 +257,12 @@ agdb:BakeAct rdf:type owl:NamedIndividual ,
                       agdb:Action .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BeggingCardMarker
+agdb:BeggingCardMarker rdf:type owl:NamedIndividual ,
+                                agdb:GameMarker ;
+                       rdfs:comment "Whenever a player cannot adequately feed their family during a harvest, or via the effects of certain cards, a player must add a Begging Card to their farm. At the end of the game, each Begging Card is worth -3 points." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BuildFencesAct
 agdb:BuildFencesAct rdf:type owl:NamedIndividual ,
                              agdb:Action .
@@ -278,11 +284,21 @@ agdb:BuildStableAct rdf:type owl:NamedIndividual ,
                              agdb:Action .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cattle
+agdb:Cattle rdf:type owl:NamedIndividual ,
+                     agdb:Animal .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#CheapOcc
 agdb:CheapOcc rdf:type owl:NamedIndividual ,
                        agdb:BoardActionSpace ;
               rdfs:comment "A player's first occupation is free, each additional one costs 1 Food" ;
               rdfs:label "1 Occupation" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Clay
+agdb:Clay rdf:type owl:NamedIndividual ,
+                   agdb:BuildingResource .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#DLSpace
@@ -320,6 +336,11 @@ agdb:FGWithoutRoomSpace rdf:type owl:NamedIndividual ,
                         rdfs:label "Family Growth even without space in your home" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Fence
+agdb:Fence rdf:type owl:NamedIndividual ,
+                    agdb:PlayerToken .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FencesSpace
 agdb:FencesSpace rdf:type owl:NamedIndividual ,
                           agdb:Stage1ActionSpace ;
@@ -330,6 +351,22 @@ agdb:FencesSpace rdf:type owl:NamedIndividual ,
 agdb:FishingSpace rdf:type owl:NamedIndividual ,
                            agdb:BoardActionSpace ;
                   rdfs:label "Fishing" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Food
+agdb:Food rdf:type owl:NamedIndividual ,
+                   agdb:GoodsAndFood .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Grain
+agdb:Grain rdf:type owl:NamedIndividual ,
+                    agdb:Crop .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#GuestToken
+agdb:GuestToken rdf:type owl:NamedIndividual ,
+                         agdb:GameMarker ;
+                rdfs:comment "A token representing a temporary person on a player's farm or the board." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#HarvestBreedingPhase
@@ -361,6 +398,11 @@ agdb:OccOrFGSpace rdf:type owl:NamedIndividual ,
                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#5PlayerActionSpace> ;
                   rdfs:comment "A player's first and second Occupations cost 1 Food each. Each additional Occupation costs 2 Food" ;
                   rdfs:label "1 Occupation or, From Round 5, Family Growth" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Person
+agdb:Person rdf:type owl:NamedIndividual ,
+                     agdb:PlayerToken .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayMajorMinorAct
@@ -407,6 +449,11 @@ agdb:RSFSpace rdf:type owl:NamedIndividual ,
               rdfs:comment "Take 1 Reed, 1 Stone, and 1 Food" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Reed
+agdb:Reed rdf:type owl:NamedIndividual ,
+                   agdb:BuildingResource .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#RenoAct
 agdb:RenoAct rdf:type owl:NamedIndividual ,
                       agdb:Action .
@@ -441,6 +488,11 @@ agdb:SPSpace rdf:type owl:NamedIndividual ,
              rdfs:label "Starting Player and/or Minor Improvement" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Sheep
+agdb:Sheep rdf:type owl:NamedIndividual ,
+                    agdb:Animal .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#SowAct
 agdb:SowAct rdf:type owl:NamedIndividual ,
                      agdb:Action .
@@ -450,6 +502,16 @@ agdb:SowAct rdf:type owl:NamedIndividual ,
 agdb:SowBakeSpace rdf:type owl:NamedIndividual ,
                            agdb:Stage1ActionSpace ;
                   rdfs:label "Sow and/or Bake Bread" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stable
+agdb:Stable rdf:type owl:NamedIndividual ,
+                     agdb:PlayerToken .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stone
+agdb:Stone rdf:type owl:NamedIndividual ,
+                    agdb:BuildingResource .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#TPSpace
@@ -468,6 +530,21 @@ agdb:Take1VegSpace rdf:type owl:NamedIndividual ,
 agdb:TakeGrainSpace rdf:type owl:NamedIndividual ,
                              agdb:BoardActionSpace ;
                     rdfs:label "Take 1 Grain" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Vegetable
+agdb:Vegetable rdf:type owl:NamedIndividual ,
+                        agdb:Crop .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#WildBoar
+agdb:WildBoar rdf:type owl:NamedIndividual ,
+                       agdb:Animal .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Wood
+agdb:Wood rdf:type owl:NamedIndividual ,
+                   agdb:BuildingResource .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#WorkPhase
