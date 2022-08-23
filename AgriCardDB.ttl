@@ -291,6 +291,13 @@ agdb:DLSpace rdf:type owl:NamedIndividual ,
              rdfs:label "Day Laborer" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ExpensiveOccSpace
+agdb:ExpensiveOccSpace rdf:type owl:NamedIndividual ,
+                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlayerActionSpace> ;
+                       rdfs:comment "A player's first and second Occupation cost 1 Food each. Each Occupation after that costs 2 Food." ;
+                       rdfs:label "1 Occupation" .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FGAct
 agdb:FGAct rdf:type owl:NamedIndividual ,
                     agdb:Action .
@@ -370,6 +377,12 @@ agdb:PlowSpace rdf:type owl:NamedIndividual ,
                rdfs:label "Plow 1 Field" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#RSFSpace
+agdb:RSFSpace rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlayerActionSpace> ;
+              rdfs:comment "Take 1 Reed, 1 Stone, and 1 Food" .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#RenoAct
 agdb:RenoAct rdf:type owl:NamedIndividual ,
                       agdb:Action .
@@ -407,6 +420,12 @@ agdb:SowAct rdf:type owl:NamedIndividual ,
 agdb:SowBakeSpace rdf:type owl:NamedIndividual ,
                            agdb:Stage1ActionSpace ;
                   rdfs:label "Sow and/or Bake Bread" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#TPSpace
+agdb:TPSpace rdf:type owl:NamedIndividual ,
+                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlayerActionSpace> ;
+             rdfs:comment "Traveling Players" .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Take1VegSpace
@@ -485,6 +504,24 @@ agdb:TakeGrainSpace rdf:type owl:NamedIndividual ,
 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1StoneStage4Space> rdf:type owl:NamedIndividual ,
                                                                                                  agdb:Stage4ActionSpace ;
                                                                                         rdfs:label "1 Stone" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1WoodSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1WoodSpace> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlayerActionSpace> ;
+                                                                                 rdfs:label "1 Wood" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#2ClaySpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#2ClaySpace> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlayerActionSpace> ;
+                                                                                 rdfs:label "2 Clay" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#2WoodSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#2WoodSpace> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlayerActionSpace> ;
+                                                                                 rdfs:label "2 Wood" .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3ClaySpace
