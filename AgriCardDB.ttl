@@ -24,6 +24,12 @@ agdb:ActionSpace rdf:type owl:Class ;
                  rdfs:comment "The board spaces that players place their person tokens on during their turn. Each action space allows the player to take a specific set of one or two actions." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Animal
+agdb:Animal rdf:type owl:Class ;
+            rdfs:subClassOf agdb:GoodsAndFood ;
+            owl:disjointWith agdb:Resource .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BoardActionSpace
 agdb:BoardActionSpace rdf:type owl:Class ;
                       rdfs:subClassOf agdb:ActionSpace ;
@@ -32,9 +38,20 @@ agdb:BoardActionSpace rdf:type owl:Class ;
                       rdfs:comment "The actions spaces that are always available from the start of round 1 regardless of player count." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BuildingResource
+agdb:BuildingResource rdf:type owl:Class ;
+                      rdfs:subClassOf agdb:Resource ;
+                      owl:disjointWith agdb:Crop .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Card
 agdb:Card rdf:type owl:Class ;
           rdfs:comment "The class of cards that can be added to a player's farm." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Crop
+agdb:Crop rdf:type owl:Class ;
+          rdfs:subClassOf agdb:Resource .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FarmyardSpace
@@ -45,6 +62,12 @@ agdb:FarmyardSpace rdf:type owl:Class ;
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Field
 agdb:Field rdf:type owl:Class ;
            rdfs:subClassOf agdb:FarmyardSpace .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#GoodsAndFood
+agdb:GoodsAndFood rdf:type owl:Class ;
+                  owl:disjointWith agdb:PlayerToken ;
+                  rdfs:comment "Individuals in this class represent the tokens for animals, resources, and food. There are no quantity limits on these tokens. Note: in the revised version of the game, food also counts as a good." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#HarvestPhase
@@ -89,6 +112,16 @@ agdb:PlayerCountActionSpace rdf:type owl:Class ;
                             rdfs:subClassOf agdb:ActionSpace ;
                             owl:disjointWith agdb:RoundActionSpace ;
                             rdfs:comment "The action spaces that are always available from the start of round 1, depending on the number of players in the game." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayerToken
+agdb:PlayerToken rdf:type owl:Class ;
+                 rdfs:comment "The colored game pieces given to each player during game set up. These represent fixed quantities." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Resource
+agdb:Resource rdf:type owl:Class ;
+              rdfs:subClassOf agdb:GoodsAndFood .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Room
