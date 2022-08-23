@@ -87,6 +87,10 @@ agdb:GameMarker rdf:type owl:Class ;
                 rdfs:comment "The various physical tokens (excluding room and field tiles) used in the game." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#GameVersion
+agdb:GameVersion rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#GoodsAndFood
 agdb:GoodsAndFood rdf:type owl:Class ;
                   rdfs:subClassOf agdb:GameMarker ;
@@ -497,6 +501,11 @@ agdb:OccOrFGSpace rdf:type owl:NamedIndividual ,
                   rdfs:label "1 Occupation or, From Round 5, Family Growth" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#OriginalVersion
+agdb:OriginalVersion rdf:type owl:NamedIndividual ,
+                              agdb:GameVersion .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Pasture
 agdb:Pasture rdf:type owl:NamedIndividual ,
                       agdb:FarmyardSpace .
@@ -592,6 +601,11 @@ agdb:RenoImpSpace rdf:type owl:NamedIndividual ,
 agdb:ReturningHomePhase rdf:type owl:NamedIndividual ,
                                  agdb:Phase ;
                         rdfs:comment "The clean-up phase before the end of the round (in rounds without a harvest) or the start of a harvest. Many card effects resolve during this phase. All players return their person tokens to their farms." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#RevisedVersion
+agdb:RevisedVersion rdf:type owl:NamedIndividual ,
+                             agdb:GameVersion .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#SPAct
