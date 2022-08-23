@@ -30,6 +30,12 @@ agdb:Animal rdf:type owl:Class ;
             owl:disjointWith agdb:Resource .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Banlist
+agdb:Banlist rdf:type owl:Class ;
+             rdfs:subClassOf agdb:CardSet ;
+             rdfs:comment "Cards that are frequently removed from their respective decks because they are deemed anti-competitive or create problematic and confusing rule interactions." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BoardActionSpace
 agdb:BoardActionSpace rdf:type owl:Class ;
                       rdfs:subClassOf agdb:ActionSpace ;
@@ -49,9 +55,21 @@ agdb:Card rdf:type owl:Class ;
           rdfs:comment "The class of cards that can be added to a player's farm." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#CardSet
+agdb:CardSet rdf:type owl:Class ;
+             rdfs:comment "A class for various collections of cards, representing either officially published decks or player-selected collections from a variety of published decks." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Crop
 agdb:Crop rdf:type owl:Class ;
           rdfs:subClassOf agdb:Resource .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Deck
+agdb:Deck rdf:type owl:Class ;
+          rdfs:subClassOf agdb:CardSet ;
+          owl:disjointWith agdb:PlayerCollection ;
+          rdfs:comment "A collection of cards that has been officially published or unofficially recognized as a specific set by community consensus." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FarmyardSpace
@@ -107,6 +125,12 @@ agdb:Phase rdf:type owl:Class ;
            rdfs:comment "Each round proceeds in phases. The phase order is Preparation, Work, ReturningHome, and Harvest (for rounds that end in a harvest)." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayerCollection
+agdb:PlayerCollection rdf:type owl:Class ;
+                      rdfs:subClassOf agdb:CardSet ;
+                      rdfs:comment "A collection of cards from various decks curated by a player or players. May change over time." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayerCountActionSpace
 agdb:PlayerCountActionSpace rdf:type owl:Class ;
                             rdfs:subClassOf agdb:ActionSpace ;
@@ -117,6 +141,13 @@ agdb:PlayerCountActionSpace rdf:type owl:Class ;
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayerToken
 agdb:PlayerToken rdf:type owl:Class ;
                  rdfs:comment "The colored game pieces given to each player during game set up. These represent fixed quantities." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PublishedDeck
+agdb:PublishedDeck rdf:type owl:Class ;
+                   rdfs:subClassOf agdb:Deck ;
+                   owl:disjointWith agdb:UnofficialDeck ;
+                   rdfs:comment "Individuals in this class represent decks that have been officially published." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Resource
@@ -169,6 +200,12 @@ agdb:Stage5ActionSpace rdf:type owl:Class ;
 agdb:Stage6ActionSpace rdf:type owl:Class ;
                        rdfs:subClassOf agdb:RoundActionSpace ;
                        rdfs:comment "The action space that becomes available at the start of round 14." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UnofficialDeck
+agdb:UnofficialDeck rdf:type owl:Class ;
+                    rdfs:subClassOf agdb:Deck ;
+                    rdfs:comment "Individuals in this class represent decks that have not been officially published but are recognized by the play-agricola community as constituting a singular deck." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3PlayerActionSpace
