@@ -208,16 +208,31 @@ agdb:UnofficialDeck rdf:type owl:Class ;
                     rdfs:comment "Individuals in this class represent decks that have not been officially published but are recognized by the play-agricola community as constituting a singular deck." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1PlusOccupation
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1PlusOccupation> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf agdb:Occupation .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3PlayerActionSpace
 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3PlayerActionSpace> rdf:type owl:Class ;
                                                                                          rdfs:subClassOf agdb:PlayerCountActionSpace ;
                                                                                          rdfs:comment "The action spaces that are placed on the game board during set up for a 3 player game." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3PlusOccupation
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3PlusOccupation> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf agdb:Occupation .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlayerActionSpace
 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlayerActionSpace> rdf:type owl:Class ;
                                                                                          rdfs:subClassOf agdb:PlayerCountActionSpace ;
                                                                                          rdfs:comment "The action spaces that are placed on the game board during set up for a 4 player game." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlusOccupation
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlusOccupation> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf agdb:Occupation .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#5PlayerActionSpace
@@ -237,6 +252,14 @@ agdb:UnofficialDeck rdf:type owl:Class ;
                 agdb:Stage4ActionSpace
                 agdb:Stage5ActionSpace
                 agdb:Stage6ActionSpace
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1PlusOccupation>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3PlusOccupation>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlusOccupation>
               )
 ] .
 
