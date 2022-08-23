@@ -37,6 +37,16 @@ agdb:Card rdf:type owl:Class ;
           rdfs:comment "The class of cards that can be added to a player's farm." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FarmyardSpace
+agdb:FarmyardSpace rdf:type owl:Class ;
+                   rdfs:comment "Individuals in this class represent the various ways that squares on a player's board can be configured." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Field
+agdb:Field rdf:type owl:Class ;
+           rdfs:subClassOf agdb:FarmyardSpace .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#HarvestPhase
 agdb:HarvestPhase rdf:type owl:Class ;
                   rdfs:subClassOf agdb:Phase ;
@@ -79,6 +89,11 @@ agdb:PlayerCountActionSpace rdf:type owl:Class ;
                             rdfs:subClassOf agdb:ActionSpace ;
                             owl:disjointWith agdb:RoundActionSpace ;
                             rdfs:comment "The action spaces that are always available from the start of round 1, depending on the number of players in the game." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Room
+agdb:Room rdf:type owl:Class ;
+          rdfs:subClassOf agdb:FarmyardSpace .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#RoundActionSpace
