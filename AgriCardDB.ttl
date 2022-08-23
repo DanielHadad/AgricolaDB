@@ -249,6 +249,75 @@ agdb:UnofficialDeck rdf:type owl:Class ;
 
 
 #################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BakeAct
+agdb:BakeAct rdf:type owl:NamedIndividual ,
+                      agdb:Action .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BuildFencesAct
+agdb:BuildFencesAct rdf:type owl:NamedIndividual ,
+                             agdb:Action .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BuildRoomAct
+agdb:BuildRoomAct rdf:type owl:NamedIndividual ,
+                           agdb:Action .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BuildStableAct
+agdb:BuildStableAct rdf:type owl:NamedIndividual ,
+                             agdb:Action .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FGAct
+agdb:FGAct rdf:type owl:NamedIndividual ,
+                    agdb:Action .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FGWithoutRoomAct
+agdb:FGWithoutRoomAct rdf:type owl:NamedIndividual ,
+                               agdb:Action .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayMajorMinorAct
+agdb:PlayMajorMinorAct rdf:type owl:NamedIndividual ,
+                                agdb:Action .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayMinorAct
+agdb:PlayMinorAct rdf:type owl:NamedIndividual ,
+                           agdb:Action .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayOccAct
+agdb:PlayOccAct rdf:type owl:NamedIndividual ,
+                         agdb:Action .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlowAct
+agdb:PlowAct rdf:type owl:NamedIndividual ,
+                      agdb:Action .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#RenoAct
+agdb:RenoAct rdf:type owl:NamedIndividual ,
+                      agdb:Action .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#SPAct
+agdb:SPAct rdf:type owl:NamedIndividual ,
+                    agdb:Action .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#SowAct
+agdb:SowAct rdf:type owl:NamedIndividual ,
+                     agdb:Action .
+
+
+#################################################################
 #    General axioms
 #################################################################
 
