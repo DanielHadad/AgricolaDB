@@ -14,6 +14,11 @@
 #    Classes
 #################################################################
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Action
+agdb:Action rdf:type owl:Class ;
+            rdfs:comment "The actions made available to players through placing person tokens on action spaces and/or card effects." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ActionSpace
 agdb:ActionSpace rdf:type owl:Class ;
                  rdfs:comment "The board spaces that players place their person tokens on during their turn. Each action space allows the player to take a specific set of one or two actions." .
@@ -30,6 +35,12 @@ agdb:BoardActionSpace rdf:type owl:Class ;
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Card
 agdb:Card rdf:type owl:Class ;
           rdfs:comment "The class of cards that can be added to a player's farm." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#HarvestPhase
+agdb:HarvestPhase rdf:type owl:Class ;
+                  rdfs:subClassOf agdb:Phase ;
+                  rdfs:comment "In rounds that end with a harvest, the game enters the harvest phase after the returning home phase is completed. The harvest is further sub-divided into three phases." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Improvement
@@ -56,6 +67,11 @@ agdb:MinorImp rdf:type owl:Class ;
 agdb:Occupation rdf:type owl:Class ;
                 rdfs:subClassOf agdb:Card ;
                 rdfs:comment "The class of Occupations that are dealt into players' hands alongside Minor Improvements." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Phase
+agdb:Phase rdf:type owl:Class ;
+           rdfs:comment "Each round proceeds in phases. The phase order is Preparation, Work, ReturningHome, and Harvest (for rounds that end in a harvest)." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayerCountActionSpace
