@@ -301,10 +301,20 @@ agdb:Clay rdf:type owl:NamedIndividual ,
                    agdb:BuildingResource .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ClayHutRoom
+agdb:ClayHutRoom rdf:type owl:NamedIndividual ,
+                          agdb:Room .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#DLSpace
 agdb:DLSpace rdf:type owl:NamedIndividual ,
                       agdb:BoardActionSpace ;
              rdfs:label "Day Laborer" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#EmptyField
+agdb:EmptyField rdf:type owl:NamedIndividual ,
+                         agdb:Field .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ExpensiveOccSpace
@@ -339,6 +349,11 @@ agdb:FGWithoutRoomSpace rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Fence
 agdb:Fence rdf:type owl:NamedIndividual ,
                     agdb:PlayerToken .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FencedStable
+agdb:FencedStable rdf:type owl:NamedIndividual ,
+                           agdb:FarmyardSpace .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FencesSpace
@@ -400,9 +415,19 @@ agdb:OccOrFGSpace rdf:type owl:NamedIndividual ,
                   rdfs:label "1 Occupation or, From Round 5, Family Growth" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Pasture
+agdb:Pasture rdf:type owl:NamedIndividual ,
+                      agdb:FarmyardSpace .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Person
 agdb:Person rdf:type owl:NamedIndividual ,
                      agdb:PlayerToken .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlantedField
+agdb:PlantedField rdf:type owl:NamedIndividual ,
+                           agdb:Field .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayMajorMinorAct
@@ -418,6 +443,16 @@ agdb:PlayMinorAct rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayOccAct
 agdb:PlayOccAct rdf:type owl:NamedIndividual ,
                          agdb:Action .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayedImprovement
+agdb:PlayedImprovement rdf:type owl:NamedIndividual ,
+                                agdb:FarmyardSpace .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayedOccupation
+agdb:PlayedOccupation rdf:type owl:NamedIndividual ,
+                               agdb:FarmyardSpace .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlowAct
@@ -514,6 +549,11 @@ agdb:Stone rdf:type owl:NamedIndividual ,
                     agdb:BuildingResource .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#StoneHouseRoom
+agdb:StoneHouseRoom rdf:type owl:NamedIndividual ,
+                             agdb:Room .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#TPSpace
 agdb:TPSpace rdf:type owl:NamedIndividual ,
                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlayerActionSpace> ;
@@ -532,6 +572,16 @@ agdb:TakeGrainSpace rdf:type owl:NamedIndividual ,
                     rdfs:label "Take 1 Grain" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UnfencedStable
+agdb:UnfencedStable rdf:type owl:NamedIndividual ,
+                             agdb:FarmyardSpace .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UnusedFarmSpace
+agdb:UnusedFarmSpace rdf:type owl:NamedIndividual ,
+                              agdb:FarmyardSpace .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Vegetable
 agdb:Vegetable rdf:type owl:NamedIndividual ,
                         agdb:Crop .
@@ -545,6 +595,11 @@ agdb:WildBoar rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Wood
 agdb:Wood rdf:type owl:NamedIndividual ,
                    agdb:BuildingResource .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#WoodHutRoom
+agdb:WoodHutRoom rdf:type owl:NamedIndividual ,
+                          agdb:Room .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#WorkPhase
