@@ -332,6 +332,24 @@ agdb:FishingSpace rdf:type owl:NamedIndividual ,
                   rdfs:label "Fishing" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#HarvestBreedingPhase
+agdb:HarvestBreedingPhase rdf:type owl:NamedIndividual ,
+                                   agdb:HarvestPhase ;
+                          rdfs:comment "If a player has at least two animals of the same type, the animals breed to process a newborn animal. The newborn animal must be housed on the player's farm and cannot be converted to food during this phase." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#HarvestFeedingPhase
+agdb:HarvestFeedingPhase rdf:type owl:NamedIndividual ,
+                                  agdb:HarvestPhase ;
+                         rdfs:comment "In this phase, players must pay an appropriate amount of Food in order to feed their families." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#HarvestFieldPhase
+agdb:HarvestFieldPhase rdf:type owl:NamedIndividual ,
+                                agdb:HarvestPhase ;
+                       rdfs:comment "The first phase of a harvest. Many card effects resolve during this phase. Fields are harvested." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#MajorMinorSpace
 agdb:MajorMinorSpace rdf:type owl:NamedIndividual ,
                               agdb:Stage1ActionSpace ;
@@ -377,6 +395,12 @@ agdb:PlowSpace rdf:type owl:NamedIndividual ,
                rdfs:label "Plow 1 Field" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PreparationPhase
+agdb:PreparationPhase rdf:type owl:NamedIndividual ,
+                               agdb:Phase ;
+                      rdfs:comment "The first phase of a round. The new round card is flipped face up and the appropriate items are added to the board." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#RSFSpace
 agdb:RSFSpace rdf:type owl:NamedIndividual ,
                        <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlayerActionSpace> ;
@@ -398,6 +422,12 @@ agdb:RenoFenceSpace rdf:type owl:NamedIndividual ,
 agdb:RenoImpSpace rdf:type owl:NamedIndividual ,
                            agdb:Stage2ActionSpace ;
                   rdfs:label "After Renovation also 1 Major or Minor Improvement" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReturningHomePhase
+agdb:ReturningHomePhase rdf:type owl:NamedIndividual ,
+                                 agdb:Phase ;
+                        rdfs:comment "The clean-up phase before the end of the round (in rounds without a harvest) or the start of a harvest. Many card effects resolve during this phase. All players return their person tokens to their farms." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#SPAct
@@ -438,6 +468,12 @@ agdb:Take1VegSpace rdf:type owl:NamedIndividual ,
 agdb:TakeGrainSpace rdf:type owl:NamedIndividual ,
                              agdb:BoardActionSpace ;
                     rdfs:label "Take 1 Grain" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#WorkPhase
+agdb:WorkPhase rdf:type owl:NamedIndividual ,
+                        agdb:Phase ;
+               rdfs:comment "The round phase in which players use action spaces by placing person and/or guest tokens. Ends when all players have placed all of their available person and guest tokens." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1AnimalSpace
