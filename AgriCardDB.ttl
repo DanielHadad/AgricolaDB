@@ -1,25 +1,25 @@
-@prefix : <http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#> .
+@prefix : <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix agdb: <http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#> .
+@prefix agdb: <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB> .
+@base <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB> .
 
-<http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB> rdf:type owl:Ontology ;
-                                                                 rdfs:comment "A semantic card database for the board game Agricola." .
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB> rdf:type owl:Ontology ;
+                                                                       rdfs:comment "A semantic card database for the board game Agricola." .
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#ActionSpace
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ActionSpace
 agdb:ActionSpace rdf:type owl:Class ;
                  rdfs:comment "The board spaces that players place their person tokens on during their turn. Each action space allows the player to take a specific set of one or two actions." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#BoardActionSpace
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BoardActionSpace
 agdb:BoardActionSpace rdf:type owl:Class ;
                       rdfs:subClassOf agdb:ActionSpace ;
                       owl:disjointWith agdb:PlayerCountActionSpace ,
@@ -27,102 +27,102 @@ agdb:BoardActionSpace rdf:type owl:Class ;
                       rdfs:comment "The actions spaces that are always available from the start of round 1 regardless of player count." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#Card
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Card
 agdb:Card rdf:type owl:Class ;
           rdfs:comment "The class of cards that can be added to a player's farm." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#Improvement
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Improvement
 agdb:Improvement rdf:type owl:Class ;
                  rdfs:subClassOf agdb:Card ;
                  owl:disjointWith agdb:Occupation ;
                  rdfs:comment "The class of Improvements" .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#MajorImp
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#MajorImp
 agdb:MajorImp rdf:type owl:Class ;
               rdfs:subClassOf agdb:Improvement ;
               owl:disjointWith agdb:MinorImp ;
               rdfs:comment "The class of fixed, communal Major Improvements." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#MinorImp
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#MinorImp
 agdb:MinorImp rdf:type owl:Class ;
               rdfs:subClassOf agdb:Improvement ;
               rdfs:comment "The class of Minor Improvements that are dealt into players' hands along with Occupations." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#Occupation
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Occupation
 agdb:Occupation rdf:type owl:Class ;
                 rdfs:subClassOf agdb:Card ;
                 rdfs:comment "The class of Occupations that are dealt into players' hands alongside Minor Improvements." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#PlayerCountActionSpace
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayerCountActionSpace
 agdb:PlayerCountActionSpace rdf:type owl:Class ;
                             rdfs:subClassOf agdb:ActionSpace ;
                             owl:disjointWith agdb:RoundActionSpace ;
                             rdfs:comment "The action spaces that are always available from the start of round 1, depending on the number of players in the game." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#RoundActionSpace
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#RoundActionSpace
 agdb:RoundActionSpace rdf:type owl:Class ;
                       rdfs:subClassOf agdb:ActionSpace ;
                       rdfs:comment "The action spaces that become available as the game progresses from one round to the next." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#Stage1ActionSpace
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stage1ActionSpace
 agdb:Stage1ActionSpace rdf:type owl:Class ;
                        rdfs:subClassOf agdb:RoundActionSpace ;
                        rdfs:comment "The action spaces that become available at the start of rounds 1, 2, 3, and 4." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#Stage2ActionSpace
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stage2ActionSpace
 agdb:Stage2ActionSpace rdf:type owl:Class ;
                        rdfs:subClassOf agdb:RoundActionSpace ;
                        rdfs:comment "The action spaces that become available at the start of rounds 5, 6, and 7." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#Stage3ActionSpace
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stage3ActionSpace
 agdb:Stage3ActionSpace rdf:type owl:Class ;
                        rdfs:subClassOf agdb:RoundActionSpace ;
                        rdfs:comment "The action spaces that become available at the start of rounds 8 and 9." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#Stage4ActionSpace
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stage4ActionSpace
 agdb:Stage4ActionSpace rdf:type owl:Class ;
                        rdfs:subClassOf agdb:RoundActionSpace ;
                        rdfs:comment "The action spaces that become available at the start of rounds 10 and 11." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#Stage5ActionSpace
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stage5ActionSpace
 agdb:Stage5ActionSpace rdf:type owl:Class ;
                        rdfs:subClassOf agdb:RoundActionSpace ;
                        rdfs:comment "The action spaces that become available at the start of rounds 12 and 13." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#Stage6ActionSpace
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stage6ActionSpace
 agdb:Stage6ActionSpace rdf:type owl:Class ;
                        rdfs:subClassOf agdb:RoundActionSpace ;
                        rdfs:comment "The action space that becomes available at the start of round 14." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#3PlayerActionSpace
-<http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#3PlayerActionSpace> rdf:type owl:Class ;
-                                                                                   rdfs:subClassOf agdb:PlayerCountActionSpace ;
-                                                                                   rdfs:comment "The action spaces that are placed on the game board during set up for a 3 player game." .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3PlayerActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3PlayerActionSpace> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf agdb:PlayerCountActionSpace ;
+                                                                                         rdfs:comment "The action spaces that are placed on the game board during set up for a 3 player game." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#4PlayerActionSpace
-<http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#4PlayerActionSpace> rdf:type owl:Class ;
-                                                                                   rdfs:subClassOf agdb:PlayerCountActionSpace ;
-                                                                                   rdfs:comment "The action spaces that are placed on the game board during set up for a 4 player game." .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlayerActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlayerActionSpace> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf agdb:PlayerCountActionSpace ;
+                                                                                         rdfs:comment "The action spaces that are placed on the game board during set up for a 4 player game." .
 
 
-###  http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#5PlayerActionSpace
-<http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#5PlayerActionSpace> rdf:type owl:Class ;
-                                                                                   rdfs:subClassOf agdb:PlayerCountActionSpace ;
-                                                                                   rdfs:comment "The action spaces that are placed on the game board during set up for a 5 player game." .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#5PlayerActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#5PlayerActionSpace> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf agdb:PlayerCountActionSpace ;
+                                                                                         rdfs:comment "The action spaces that are placed on the game board during set up for a 5 player game." .
 
 
 #################################################################
@@ -141,9 +141,9 @@ agdb:Stage6ActionSpace rdf:type owl:Class ;
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#3PlayerActionSpace>
-                <http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#4PlayerActionSpace>
-                <http://www.semanticweb.org/danie/ontologies/2022/7/AgriCardDB#5PlayerActionSpace>
+  owl:members ( <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3PlayerActionSpace>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlayerActionSpace>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#5PlayerActionSpace>
               )
 ] .
 
