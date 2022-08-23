@@ -175,36 +175,68 @@ agdb:RoundActionSpace rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stage1ActionSpace
 agdb:Stage1ActionSpace rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Class ;
+                                             owl:oneOf ( agdb:FencesSpace
+                                                         agdb:MajorMinorSpace
+                                                         agdb:SowBakeSpace
+                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1SheepSpace>
+                                                       )
+                                           ] ;
                        rdfs:subClassOf agdb:RoundActionSpace ;
                        rdfs:comment "The action spaces that become available at the start of rounds 1, 2, 3, and 4." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stage2ActionSpace
 agdb:Stage2ActionSpace rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Class ;
+                                             owl:oneOf ( agdb:FGSpace
+                                                         agdb:RenoImpSpace
+                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1StoneStage2Space>
+                                                       )
+                                           ] ;
                        rdfs:subClassOf agdb:RoundActionSpace ;
                        rdfs:comment "The action spaces that become available at the start of rounds 5, 6, and 7." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stage3ActionSpace
 agdb:Stage3ActionSpace rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Class ;
+                                             owl:oneOf ( agdb:Take1VegSpace
+                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1BoarSpace>
+                                                       )
+                                           ] ;
                        rdfs:subClassOf agdb:RoundActionSpace ;
                        rdfs:comment "The action spaces that become available at the start of rounds 8 and 9." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stage4ActionSpace
 agdb:Stage4ActionSpace rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Class ;
+                                             owl:oneOf ( <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1CowSpace>
+                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1StoneStage4Space>
+                                                       )
+                                           ] ;
                        rdfs:subClassOf agdb:RoundActionSpace ;
                        rdfs:comment "The action spaces that become available at the start of rounds 10 and 11." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stage5ActionSpace
 agdb:Stage5ActionSpace rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Class ;
+                                             owl:oneOf ( agdb:FGWithoutRoomSpace
+                                                         agdb:PlowSowSpace
+                                                       )
+                                           ] ;
                        rdfs:subClassOf agdb:RoundActionSpace ;
                        rdfs:comment "The action spaces that become available at the start of rounds 12 and 13." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stage6ActionSpace
 agdb:Stage6ActionSpace rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Class ;
+                                             owl:oneOf ( agdb:RenoFenceSpace
+                                                       )
+                                           ] ;
                        rdfs:subClassOf agdb:RoundActionSpace ;
                        rdfs:comment "The action space that becomes available at the start of round 14." .
 
