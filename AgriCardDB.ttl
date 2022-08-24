@@ -16,7 +16,13 @@
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Action
 agdb:Action rdf:type owl:Class ;
-            rdfs:comment "The actions made available to players through placing person tokens on action spaces and/or card effects." .
+            rdfs:subClassOf agdb:ActionOrEffect ;
+            owl:disjointWith agdb:Effect .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ActionOrEffect
+agdb:ActionOrEffect rdf:type owl:Class ;
+                    rdfs:comment "The actions made available to players through placing person tokens on action spaces and/or resolving played cards. Additionally, the effects of using certain cards. Card effects might produce similar results to taking actions, but these are technically different." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ActionSpace
@@ -70,6 +76,11 @@ agdb:Deck rdf:type owl:Class ;
           rdfs:subClassOf agdb:CardSet ;
           owl:disjointWith agdb:PlayerCollection ;
           rdfs:comment "A collection of cards that has been officially published or unofficially recognized as a specific set by community consensus." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Effect
+agdb:Effect rdf:type owl:Class ;
+            rdfs:subClassOf agdb:ActionOrEffect .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FarmyardSpace
@@ -575,99 +586,99 @@ agdb:RSFSpace rdf:type owl:NamedIndividual ,
               rdfs:comment "Take 1 Reed, 1 Stone, and 1 Food" .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveAct
-agdb:ReceiveAct rdf:type owl:NamedIndividual ,
-                         agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveAnimalEffect
+agdb:ReceiveAnimalEffect rdf:type owl:NamedIndividual ,
+                                  agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveAnimalAct
-agdb:ReceiveAnimalAct rdf:type owl:NamedIndividual ,
-                               agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveBREffect
+agdb:ReceiveBREffect rdf:type owl:NamedIndividual ,
+                              agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveBRAct
-agdb:ReceiveBRAct rdf:type owl:NamedIndividual ,
-                           agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveBoarEffect
+agdb:ReceiveBoarEffect rdf:type owl:NamedIndividual ,
+                                agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveBoar
-agdb:ReceiveBoar rdf:type owl:NamedIndividual ,
-                          agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveClayEffect
+agdb:ReceiveClayEffect rdf:type owl:NamedIndividual ,
+                                agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveClayAct
-agdb:ReceiveClayAct rdf:type owl:NamedIndividual ,
-                             agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveCowEffect
+agdb:ReceiveCowEffect rdf:type owl:NamedIndividual ,
+                               agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveCowAct
-agdb:ReceiveCowAct rdf:type owl:NamedIndividual ,
-                            agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveEffect
+agdb:ReceiveEffect rdf:type owl:NamedIndividual ,
+                            agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveFenceAct
-agdb:ReceiveFenceAct rdf:type owl:NamedIndividual ,
-                              agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveFenceEffect
+agdb:ReceiveFenceEffect rdf:type owl:NamedIndividual ,
+                                 agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveFieldAct
-agdb:ReceiveFieldAct rdf:type owl:NamedIndividual ,
-                              agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveFieldEffect
+agdb:ReceiveFieldEffect rdf:type owl:NamedIndividual ,
+                                 agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveFoodAct
-agdb:ReceiveFoodAct rdf:type owl:NamedIndividual ,
-                             agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveFoodEffect
+agdb:ReceiveFoodEffect rdf:type owl:NamedIndividual ,
+                                agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveGoodAct
-agdb:ReceiveGoodAct rdf:type owl:NamedIndividual ,
-                             agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveGoodEffect
+agdb:ReceiveGoodEffect rdf:type owl:NamedIndividual ,
+                                agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveGrainAct
-agdb:ReceiveGrainAct rdf:type owl:NamedIndividual ,
-                              agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveGrainEffect
+agdb:ReceiveGrainEffect rdf:type owl:NamedIndividual ,
+                                 agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveReedAct
-agdb:ReceiveReedAct rdf:type owl:NamedIndividual ,
-                             agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveReedEffect
+agdb:ReceiveReedEffect rdf:type owl:NamedIndividual ,
+                                agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveResourceAct
-agdb:ReceiveResourceAct rdf:type owl:NamedIndividual ,
-                                 agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveResourceEffect
+agdb:ReceiveResourceEffect rdf:type owl:NamedIndividual ,
+                                    agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveRoomAct
-agdb:ReceiveRoomAct rdf:type owl:NamedIndividual ,
-                             agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveRoomEffect
+agdb:ReceiveRoomEffect rdf:type owl:NamedIndividual ,
+                                agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveSheepAct
-agdb:ReceiveSheepAct rdf:type owl:NamedIndividual ,
-                              agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveSheepEffect
+agdb:ReceiveSheepEffect rdf:type owl:NamedIndividual ,
+                                 agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveStableAct
-agdb:ReceiveStableAct rdf:type owl:NamedIndividual ,
-                               agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveStableEffect
+agdb:ReceiveStableEffect rdf:type owl:NamedIndividual ,
+                                  agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveStoneAct
-agdb:ReceiveStoneAct rdf:type owl:NamedIndividual ,
-                              agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveStoneEffect
+agdb:ReceiveStoneEffect rdf:type owl:NamedIndividual ,
+                                 agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveVegAct
-agdb:ReceiveVegAct rdf:type owl:NamedIndividual ,
-                            agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveVegEffect
+agdb:ReceiveVegEffect rdf:type owl:NamedIndividual ,
+                               agdb:Effect .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveWoodAct
-agdb:ReceiveWoodAct rdf:type owl:NamedIndividual ,
-                             agdb:Action .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveWoodEffect
+agdb:ReceiveWoodEffect rdf:type owl:NamedIndividual ,
+                                agdb:Effect .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Reed
