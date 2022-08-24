@@ -646,6 +646,11 @@ agdb:ReceiveReedEffect rdf:type owl:NamedIndividual ,
                                 agdb:Effect .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveRenoEffect
+agdb:ReceiveRenoEffect rdf:type owl:NamedIndividual ,
+                                agdb:Effect .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ReceiveResourceEffect
 agdb:ReceiveResourceEffect rdf:type owl:NamedIndividual ,
                                     agdb:Effect .
