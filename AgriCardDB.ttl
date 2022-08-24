@@ -79,9 +79,28 @@ agdb:provides rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#hasDeckID
+agdb:hasDeckID rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#hasMinPlayerCount
+agdb:hasMinPlayerCount rdf:type owl:DatatypeProperty .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#hasOccPrereq
 agdb:hasOccPrereq rdf:type owl:DatatypeProperty ;
                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#hasText
+agdb:hasText rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#worthVP
+agdb:worthVP rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:integer .
 
 
 ###  http://www.w3.org/2002/07/owl#topDataProperty
