@@ -11,6 +11,15 @@
                                                                        rdfs:comment "A semantic card database for the board game Agricola." .
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#givesAction
+agdb:givesAction rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Action spaces and card effects give the player the ability to perform an action or actions." .
+
+
+#################################################################
 #    Classes
 #################################################################
 
