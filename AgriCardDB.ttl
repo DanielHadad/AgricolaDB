@@ -325,11 +325,11 @@ agdb:Cattle rdf:type owl:NamedIndividual ,
                      agdb:Animal .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#CheapOcc
-agdb:CheapOcc rdf:type owl:NamedIndividual ,
-                       agdb:BoardActionSpace ;
-              rdfs:comment "A player's first occupation is free, each additional one costs 1 Food" ;
-              rdfs:label "1 Occupation" .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#CheapOccSpace
+agdb:CheapOccSpace rdf:type owl:NamedIndividual ,
+                            agdb:BoardActionSpace ;
+                   rdfs:comment "A player's first occupation is free, each additional one costs 1 Food" ;
+                   rdfs:label "1 Occupation" .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Clay
@@ -740,10 +740,10 @@ agdb:WorkPhase rdf:type owl:NamedIndividual ,
                                                                                  rdfs:label "1 Reed" .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1ReedStoneWood
-<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1ReedStoneWood> rdf:type owl:NamedIndividual ,
-                                                                                              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#5PlayerActionSpace> ;
-                                                                                     rdfs:label "1 Reed. In addition, take 1 Stone and 1 Wood" .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1ReedStoneWoodSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1ReedStoneWoodSpace> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#5PlayerActionSpace> ;
+                                                                                          rdfs:label "1 Reed. In addition, take 1 Stone and 1 Wood" .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1ResourceSpace
@@ -752,10 +752,10 @@ agdb:WorkPhase rdf:type owl:NamedIndividual ,
                                                                                      rdfs:label "Take 1 Building Resource of your choice" .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1RoomOrTP
-<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1RoomOrTP> rdf:type owl:NamedIndividual ,
-                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#5PlayerActionSpace> ;
-                                                                                rdfs:label "Build 1 Room or Traveling Players" .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1RoomOrTPSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1RoomOrTPSpace> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#5PlayerActionSpace> ;
+                                                                                     rdfs:label "Build 1 Room or Traveling Players" .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1SheepSpace
