@@ -16,7 +16,18 @@
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#givesAction
 agdb:givesAction rdf:type owl:ObjectProperty ;
-                 rdfs:comment "Action spaces and card effects give the player the ability to perform an action or actions." .
+                 rdfs:subPropertyOf agdb:givesActionOrEffect ;
+                 rdfs:comment "An action space or a card is related to an action or actions if using the action space or the card gives the player the ability to take that action or actions." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#givesActionOrEffect
+agdb:givesActionOrEffect rdf:type owl:ObjectProperty ;
+                         rdfs:comment "Action spaces and card effects give the player the ability to perform an action or actions or to resolve certain effects." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#givesEffect
+agdb:givesEffect rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf agdb:givesActionOrEffect .
 
 
 #################################################################
