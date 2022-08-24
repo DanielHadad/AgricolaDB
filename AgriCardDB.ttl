@@ -29,6 +29,11 @@ agdb:categorizedBy rdf:type owl:ObjectProperty ;
                    rdfs:comment "In this model categories include strategies, activation requirements, effect similarity, and other broad taxonomic considerations." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#counters
+agdb:counters rdf:type owl:ObjectProperty ;
+              rdfs:comment "Some cards counter the strategy set up by an opponent. Often, by producing a passive benefit whenever an opponent uses an action space that their strategy relies on." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#givesAction
 agdb:givesAction rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf agdb:givesActionOrEffect ;
@@ -45,9 +50,24 @@ agdb:givesEffect rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf agdb:givesActionOrEffect .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#hasFarmReq
+agdb:hasFarmReq rdf:type owl:ObjectProperty ;
+                rdfs:comment "Some cards can only be activated when a player's farm meets certain conditions." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#namesSpecifically
+agdb:namesSpecifically rdf:type owl:ObjectProperty ;
+                       rdfs:comment "Some cards specifically name other cards in their interactions" .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#occursDuring
 agdb:occursDuring rdf:type owl:ObjectProperty ;
                   rdfs:comment "Many effects have specific phases in which their effects resolve." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#partOf
+agdb:partOf rdf:type owl:ObjectProperty ;
+            rdfs:comment "Cards are parts of Card Sets and Game Versions" .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#provides
