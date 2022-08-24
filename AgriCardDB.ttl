@@ -50,9 +50,18 @@ agdb:givesEffect rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf agdb:givesActionOrEffect .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#hasCost
+agdb:hasCost rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#hasFarmReq
 agdb:hasFarmReq rdf:type owl:ObjectProperty ;
                 rdfs:comment "Some cards can only be activated when a player's farm meets certain conditions." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#hasReturnCost
+agdb:hasReturnCost rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Some cards require the player to return previously played cards to the board as costs." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#namesSpecifically
