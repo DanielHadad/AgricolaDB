@@ -14,6 +14,11 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#addsToFuture
+agdb:addsToFuture rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Some cards have the effect of adding items to the start of future rounds." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#altersActionSpace
 agdb:altersActionSpace rdf:type owl:ObjectProperty ;
                        rdfs:comment "Many cards change the way that the player or their opponents interact with action spaces by altering the effect of using them." .
@@ -38,6 +43,11 @@ agdb:givesActionOrEffect rdf:type owl:ObjectProperty ;
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#givesEffect
 agdb:givesEffect rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf agdb:givesActionOrEffect .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#occursDuring
+agdb:occursDuring rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Many effects have specific phases in which their effects resolve." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#provides
