@@ -156,11 +156,6 @@ agdb:Phase rdf:type owl:Class ;
            rdfs:comment "Each round proceeds in phases. The phase order is Preparation, Work, ReturningHome, and Harvest (for rounds that end in a harvest)." .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayEffect
-agdb:PlayEffect rdf:type owl:Class ;
-                rdfs:subClassOf agdb:Category .
-
-
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayerCollection
 agdb:PlayerCollection rdf:type owl:Class ;
                       rdfs:subClassOf agdb:CardSet ;
@@ -201,6 +196,11 @@ agdb:Room rdf:type owl:Class ;
 agdb:RoundActionSpace rdf:type owl:Class ;
                       rdfs:subClassOf agdb:ActionSpace ;
                       rdfs:comment "The action spaces that become available as the game progresses from one round to the next." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#SimilarUse
+agdb:SimilarUse rdf:type owl:Class ;
+                rdfs:subClassOf agdb:Category .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stage1ActionSpace
@@ -631,7 +631,7 @@ agdb:PlowSpace rdf:type owl:NamedIndividual ,
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PondGrp
 agdb:PondGrp rdf:type owl:NamedIndividual ,
-                      agdb:PlayEffect ;
+                      agdb:SimilarUse ;
              rdfs:comment "The category of mostly point-granting minors with no play cost that add food and/or resources to future round spaces." .
 
 
@@ -1110,7 +1110,7 @@ agdb:WorkPhase rdf:type owl:NamedIndividual ,
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( agdb:Designation
-                agdb:PlayEffect
+                agdb:SimilarUse
                 agdb:Strategy
                 agdb:UweRevised
               )
