@@ -66,6 +66,10 @@ agdb:CardSet rdf:type owl:Class ;
              rdfs:comment "A class for various collections of cards, representing either officially published decks or player-selected collections from a variety of published decks." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Category
+agdb:Category rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Crop
 agdb:Crop rdf:type owl:Class ;
           rdfs:subClassOf agdb:Resource .
@@ -76,6 +80,11 @@ agdb:Deck rdf:type owl:Class ;
           rdfs:subClassOf agdb:CardSet ;
           owl:disjointWith agdb:PlayerCollection ;
           rdfs:comment "A collection of cards that has been officially published or unofficially recognized as a specific set by community consensus." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Designation
+agdb:Designation rdf:type owl:Class ;
+                 rdfs:subClassOf agdb:Category .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Effect
@@ -144,6 +153,11 @@ agdb:Occupation rdf:type owl:Class ;
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Phase
 agdb:Phase rdf:type owl:Class ;
            rdfs:comment "Each round proceeds in phases. The phase order is Preparation, Work, ReturningHome, and Harvest (for rounds that end in a harvest)." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayEffect
+agdb:PlayEffect rdf:type owl:Class ;
+                rdfs:subClassOf agdb:Category .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayerCollection
@@ -256,10 +270,20 @@ agdb:Stage6ActionSpace rdf:type owl:Class ;
                        rdfs:comment "The action space that becomes available at the start of round 14." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Strategy
+agdb:Strategy rdf:type owl:Class ;
+              rdfs:subClassOf agdb:Category .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UnofficialDeck
 agdb:UnofficialDeck rdf:type owl:Class ;
                     rdfs:subClassOf agdb:Deck ;
                     rdfs:comment "Individuals in this class represent decks that have not been officially published but are recognized by the play-agricola community as constituting a singular deck." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UweRevised
+agdb:UweRevised rdf:type owl:Class ;
+                rdfs:subClassOf agdb:Category .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#1PlusOccupation
@@ -1034,6 +1058,15 @@ agdb:WorkPhase rdf:type owl:NamedIndividual ,
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( agdb:Designation
+                agdb:PlayEffect
+                agdb:Strategy
+                agdb:UweRevised
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( agdb:Stage1ActionSpace
