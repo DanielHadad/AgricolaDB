@@ -50,6 +50,10 @@ agdb:givesEffect rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf agdb:givesActionOrEffect .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#hasAuthor
+agdb:hasAuthor rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#hasCost
 agdb:hasCost rdf:type owl:ObjectProperty .
 
@@ -94,7 +98,8 @@ agdb:hasDeckID rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#hasMinPlayerCount
-agdb:hasMinPlayerCount rdf:type owl:DatatypeProperty .
+agdb:hasMinPlayerCount rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:nonNegativeInteger .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#hasOccPrereq
