@@ -524,6 +524,12 @@ agdb:GuestToken rdf:type owl:NamedIndividual ,
                 rdfs:comment "A token representing a temporary person on a player's farm or the board." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#GuildGrp
+agdb:GuildGrp rdf:type owl:NamedIndividual ,
+                       agdb:Designation ;
+              rdfs:comment "The category including the Joinery, Pottery, Basket Maker's Workshop, and their respective upgrades." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#HarvestBreedingPhase
 agdb:HarvestBreedingPhase rdf:type owl:NamedIndividual ,
                                    agdb:HarvestPhase ;
@@ -540,6 +546,12 @@ agdb:HarvestFeedingPhase rdf:type owl:NamedIndividual ,
 agdb:HarvestFieldPhase rdf:type owl:NamedIndividual ,
                                 agdb:HarvestPhase ;
                        rdfs:comment "The first phase of a harvest. Many card effects resolve during this phase. Fields are harvested." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#HarvestFood
+agdb:HarvestFood rdf:type owl:NamedIndividual ,
+                          agdb:SimilarUse ;
+                 rdfs:comment "The category of cards that provide food during the Harvest, either passively through met farm conditions, or by allowing the conversion of Goods to Food during the Harvest specifically." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#I
