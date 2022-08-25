@@ -335,6 +335,18 @@ agdb:BeggingCardMarker rdf:type owl:NamedIndividual ,
                        rdfs:comment "Whenever a player cannot adequately feed their family during a harvest, or via the effects of certain cards, a player must add a Begging Card to their farm. At the end of the game, each Begging Card is worth -3 points." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BigHouse
+agdb:BigHouse rdf:type owl:NamedIndividual ,
+                       agdb:Strategy ;
+              rdfs:comment "A strategic approach where the player builds a house with a large number (5+) of rooms." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BigImpPoints
+agdb:BigImpPoints rdf:type owl:NamedIndividual ,
+                           agdb:Strategy ;
+                  rdfs:comment "A strategic approach where the player aims to acquire a large number of victory points from building Improvements." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BonusGrp
 agdb:BonusGrp rdf:type owl:NamedIndividual ,
                        agdb:Designation ;
@@ -414,6 +426,24 @@ agdb:E rdf:type owl:NamedIndividual ,
        rdfs:label "E Deck" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#EarlyClayRen
+agdb:EarlyClayRen rdf:type owl:NamedIndividual ,
+                           agdb:Strategy ;
+                  rdfs:comment "A strategic approach where the player renovated to Clay early to leverage the effect of particular cards." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#EarlyCrops
+agdb:EarlyCrops rdf:type owl:NamedIndividual ,
+                         agdb:Strategy ;
+                rdfs:comment "A strategic approach where the player plows fields and sows grain and/or vegetables in the early Stages of the game." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#EarlyStoneRen
+agdb:EarlyStoneRen rdf:type owl:NamedIndividual ,
+                            agdb:Strategy ;
+                   rdfs:comment "A strategic approach where the player renovates to Stone early to leverage the effects of particular cards." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#EmptyField
 agdb:EmptyField rdf:type owl:NamedIndividual ,
                          agdb:Field .
@@ -446,6 +476,12 @@ agdb:FGWithoutRoomAct rdf:type owl:NamedIndividual ,
 agdb:FGWithoutRoomSpace rdf:type owl:NamedIndividual ,
                                  agdb:Stage5ActionSpace ;
                         rdfs:label "Family Growth even without space in your home" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FeedingEngine
+agdb:FeedingEngine rdf:type owl:NamedIndividual ,
+                            agdb:SimilarUse ;
+                   rdfs:comment "The category of cards that are an important part of creating sustainable feeding for the player." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Fence
@@ -511,6 +547,12 @@ agdb:G6 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#G7
 agdb:G7 rdf:type owl:NamedIndividual ,
                  agdb:UnofficialDeck .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#GetBreedingPair
+agdb:GetBreedingPair rdf:type owl:NamedIndividual ,
+                              agdb:Strategy ;
+                     rdfs:comment "A strategic approach where the player gains the ability to hold at least 3 animals of the same kind" .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Grain
@@ -584,6 +626,12 @@ agdb:MinorPlowGrp rdf:type owl:NamedIndividual ,
                   rdfs:comment "The category of cards that count as minor Plows" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#NurFG
+agdb:NurFG rdf:type owl:NamedIndividual ,
+                    agdb:Strategy ;
+           rdfs:comment "A strategic approach in which the player aims to acquire resources to build one or more additional rooms and grow their family as soon as possible." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#OccOrFGSpace
 agdb:OccOrFGSpace rdf:type owl:NamedIndividual ,
                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#5PlayerActionSpace> ;
@@ -612,6 +660,12 @@ agdb:OriginalVersion rdf:type owl:NamedIndividual ,
 agdb:OvenGrp rdf:type owl:NamedIndividual ,
                       agdb:Designation ;
              rdfs:comment "Category of improvements that count as Ovens" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PassingMinor
+agdb:PassingMinor rdf:type owl:NamedIndividual ,
+                           agdb:Designation ;
+                  rdfs:comment "The category of minor improvements that must be passed to another player after being played." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Pasture
@@ -683,6 +737,12 @@ agdb:PlowSpace rdf:type owl:NamedIndividual ,
                rdfs:label "Plow 1 Field" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PointCeiling
+agdb:PointCeiling rdf:type owl:NamedIndividual ,
+                           agdb:SimilarUse ;
+                  rdfs:comment "Cards in this category are used primarily to award victory points to the player directly without aiding in farm development." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PondGrp
 agdb:PondGrp rdf:type owl:NamedIndividual ,
                       agdb:SimilarUse ;
@@ -693,6 +753,12 @@ agdb:PondGrp rdf:type owl:NamedIndividual ,
 agdb:PreparationPhase rdf:type owl:NamedIndividual ,
                                agdb:Phase ;
                       rdfs:comment "The first phase of a round. The new round card is flipped face up and the appropriate items are added to the board." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#QueueJumper
+agdb:QueueJumper rdf:type owl:NamedIndividual ,
+                          agdb:SimilarUse ;
+                 rdfs:comment "Cards in this category aid the player in using the FG action space \"out of turn\"." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#RSFSpace
@@ -1133,6 +1199,12 @@ agdb:WorkPhase rdf:type owl:NamedIndividual ,
                                                                                  rdfs:label "2 Clay" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#2Room
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#2Room> rdf:type owl:NamedIndividual ,
+                                                                                     agdb:Strategy ;
+                                                                            rdfs:comment "A strategic approach where the player does not build any additional rooms." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#2WoodSpace
 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#2WoodSpace> rdf:type owl:NamedIndividual ,
                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4PlayerActionSpace> ;
@@ -1162,6 +1234,12 @@ agdb:WorkPhase rdf:type owl:NamedIndividual ,
                                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3PlayerActionSpace> ;
                                                                                                rdfs:comment "Costs 2 Food" ;
                                                                                                rdfs:label "1 Occupation" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3Room
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3Room> rdf:type owl:NamedIndividual ,
+                                                                                     agdb:Strategy ;
+                                                                            rdfs:comment "A strategic approach where the player aims to build exactly one additional room over the course of the game." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3WoodSpace
