@@ -334,6 +334,12 @@ agdb:BeggingCardMarker rdf:type owl:NamedIndividual ,
                        rdfs:comment "Whenever a player cannot adequately feed their family during a harvest, or via the effects of certain cards, a player must add a Begging Card to their farm. At the end of the game, each Begging Card is worth -3 points." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BreadGrp
+agdb:BreadGrp rdf:type owl:NamedIndividual ,
+                       agdb:Designation ;
+              rdfs:comment "Category of cards that have the Bake Bread symbol" .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BuildFencesAct
 agdb:BuildFencesAct rdf:type owl:NamedIndividual ,
                              agdb:Action .
@@ -375,6 +381,12 @@ agdb:Clay rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#ClayHutRoom
 agdb:ClayHutRoom rdf:type owl:NamedIndividual ,
                           agdb:Room .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#CookGrp
+agdb:CookGrp rdf:type owl:NamedIndividual ,
+                      agdb:Designation ;
+             rdfs:comment "Category of improvments with the cooking symbol." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#DLSpace
@@ -529,6 +541,12 @@ agdb:MajorMinorSpace rdf:type owl:NamedIndividual ,
                      rdfs:label "1 Major or Minor Improvement" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#MinorPlowGrp
+agdb:MinorPlowGrp rdf:type owl:NamedIndividual ,
+                           agdb:Designation ;
+                  rdfs:comment "The category of cards that count as minor Plows" .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#OccOrFGSpace
 agdb:OccOrFGSpace rdf:type owl:NamedIndividual ,
                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#5PlayerActionSpace> ;
@@ -539,6 +557,12 @@ agdb:OccOrFGSpace rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#OriginalVersion
 agdb:OriginalVersion rdf:type owl:NamedIndividual ,
                               agdb:GameVersion .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#OvenGrp
+agdb:OvenGrp rdf:type owl:NamedIndividual ,
+                      agdb:Designation ;
+             rdfs:comment "Category of improvements that count as Ovens" .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Pasture
@@ -596,6 +620,12 @@ agdb:PlowSowSpace rdf:type owl:NamedIndividual ,
 agdb:PlowSpace rdf:type owl:NamedIndividual ,
                         agdb:BoardActionSpace ;
                rdfs:label "Plow 1 Field" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PondGrp
+agdb:PondGrp rdf:type owl:NamedIndividual ,
+                      agdb:PlayEffect ;
+             rdfs:comment "The category of mostly point-granting minors with no play cost that add food and/or resources to future round spaces." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PreparationPhase
@@ -905,6 +935,12 @@ agdb:UnusedSpace rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Vegetable
 agdb:Vegetable rdf:type owl:NamedIndividual ,
                         agdb:Crop .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#WellGrp
+agdb:WellGrp rdf:type owl:NamedIndividual ,
+                      agdb:Designation ;
+             rdfs:comment "Category of improvements that count as Wells" .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#WildBoar
