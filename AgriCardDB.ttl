@@ -84,7 +84,8 @@ agdb:Deck rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Designation
 agdb:Designation rdf:type owl:Class ;
-                 rdfs:subClassOf agdb:Category .
+                 rdfs:subClassOf agdb:Category ;
+                 rdfs:comment "Category subclass reserved for groups that are explicitly referenced by other cards." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Effect
@@ -332,6 +333,12 @@ agdb:BakeAct rdf:type owl:NamedIndividual ,
 agdb:BeggingCardMarker rdf:type owl:NamedIndividual ,
                                 agdb:GameMarker ;
                        rdfs:comment "Whenever a player cannot adequately feed their family during a harvest, or via the effects of certain cards, a player must add a Begging Card to their farm. At the end of the game, each Begging Card is worth -3 points." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BonusGrp
+agdb:BonusGrp rdf:type owl:NamedIndividual ,
+                       agdb:Designation ;
+              rdfs:comment "Category of cards that have a symbol for positive or negative bonus points" .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BreadGrp
@@ -930,6 +937,12 @@ agdb:UnfencedStable rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UnusedSpace
 agdb:UnusedSpace rdf:type owl:NamedIndividual ,
                           agdb:FarmyardSpace .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#VPGrp
+agdb:VPGrp rdf:type owl:NamedIndividual ,
+                    agdb:Designation ;
+           rdfs:comment "The category of cards that have the symbol for granting positive or negative Victory Points" .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Vegetable
