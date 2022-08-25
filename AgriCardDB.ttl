@@ -547,14 +547,14 @@ agdb:PlayOccAct rdf:type owl:NamedIndividual ,
                          agdb:Action .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayedImprovement
-agdb:PlayedImprovement rdf:type owl:NamedIndividual ,
-                                agdb:FarmyardSpace .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayedImp
+agdb:PlayedImp rdf:type owl:NamedIndividual ,
+                        agdb:FarmyardSpace .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayedOccupation
-agdb:PlayedOccupation rdf:type owl:NamedIndividual ,
-                               agdb:FarmyardSpace .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayedOcc
+agdb:PlayedOcc rdf:type owl:NamedIndividual ,
+                        agdb:FarmyardSpace .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlowAct
@@ -730,6 +730,11 @@ agdb:SPSpace rdf:type owl:NamedIndividual ,
              rdfs:label "Starting Player and/or Minor Improvement" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#SPToken
+agdb:SPToken rdf:type owl:NamedIndividual ,
+                      agdb:GameMarker .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Sheep
 agdb:Sheep rdf:type owl:NamedIndividual ,
                     agdb:Animal .
@@ -744,6 +749,16 @@ agdb:SowAct rdf:type owl:NamedIndividual ,
 agdb:SowBakeSpace rdf:type owl:NamedIndividual ,
                            agdb:Stage1ActionSpace ;
                   rdfs:label "Sow and/or Bake Bread" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#SownGField
+agdb:SownGField rdf:type owl:NamedIndividual ,
+                         agdb:Field .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#SownVField
+agdb:SownVField rdf:type owl:NamedIndividual ,
+                         agdb:Field .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Stable
@@ -858,9 +873,9 @@ agdb:UnfencedStable rdf:type owl:NamedIndividual ,
                              agdb:FarmyardSpace .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UnusedFarmSpace
-agdb:UnusedFarmSpace rdf:type owl:NamedIndividual ,
-                              agdb:FarmyardSpace .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UnusedSpace
+agdb:UnusedSpace rdf:type owl:NamedIndividual ,
+                          agdb:FarmyardSpace .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Vegetable
