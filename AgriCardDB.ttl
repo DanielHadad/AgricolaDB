@@ -396,6 +396,12 @@ agdb:CookGrp rdf:type owl:NamedIndividual ,
              rdfs:comment "Category of improvments with the cooking symbol." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#DLCombo
+agdb:DLCombo rdf:type owl:NamedIndividual ,
+                      agdb:SimilarUse ;
+             rdfs:comment "The category of cards that add effects to the Day Laborer action space." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#DLSpace
 agdb:DLSpace rdf:type owl:NamedIndividual ,
                       agdb:BoardActionSpace ;
@@ -456,6 +462,12 @@ agdb:FencedStable rdf:type owl:NamedIndividual ,
 agdb:FencesSpace rdf:type owl:NamedIndividual ,
                           agdb:Stage1ActionSpace ;
                  rdfs:label "Fences" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FishCombo
+agdb:FishCombo rdf:type owl:NamedIndividual ,
+                        agdb:SimilarUse ;
+               rdfs:comment "The category of cards that add effects to the Fishing action space." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FishingSpace
@@ -548,6 +560,12 @@ agdb:MajorMinorSpace rdf:type owl:NamedIndividual ,
                      rdfs:label "1 Major or Minor Improvement" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#MakeUnblockable
+agdb:MakeUnblockable rdf:type owl:NamedIndividual ,
+                              agdb:SimilarUse ;
+                     rdfs:comment "Cards in this category allow players to use specific action spaces even if they are occupied by an opponent" .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#MinorPlowGrp
 agdb:MinorPlowGrp rdf:type owl:NamedIndividual ,
                            agdb:Designation ;
@@ -559,6 +577,18 @@ agdb:OccOrFGSpace rdf:type owl:NamedIndividual ,
                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#5PlayerActionSpace> ;
                   rdfs:comment "A player's first and second Occupations cost 1 Food each. Each additional Occupation costs 2 Food" ;
                   rdfs:label "1 Occupation or, From Round 5, Family Growth" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#OnceInClay
+agdb:OnceInClay rdf:type owl:NamedIndividual ,
+                         agdb:SimilarUse ;
+                rdfs:comment "The category of cards that have no effect unless the player lives in (at least) a Clay Hut." ,
+                             "The category of cards that have no effect unless the player lives in a Stone House." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#OnceInStone
+agdb:OnceInStone rdf:type owl:NamedIndividual ,
+                          agdb:SimilarUse .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#OriginalVersion
@@ -585,6 +615,12 @@ agdb:Person rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlantedField
 agdb:PlantedField rdf:type owl:NamedIndividual ,
                            agdb:Field .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayByStage1
+agdb:PlayByStage1 rdf:type owl:NamedIndividual ,
+                           agdb:SimilarUse ;
+                  rdfs:comment "A small category of cards that must be played before the end of Stage 1. There are other cards with timing requirements, but it is worth noting this special subset." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlayMajorMinorAct
@@ -615,6 +651,12 @@ agdb:PlayedOcc rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlowAct
 agdb:PlowAct rdf:type owl:NamedIndividual ,
                       agdb:Action .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlowCombo
+agdb:PlowCombo rdf:type owl:NamedIndividual ,
+                        agdb:SimilarUse ;
+               rdfs:comment "The category of cards that affect the Plow 1 Field space" .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#PlowSowSpace
@@ -757,6 +799,12 @@ agdb:RenoAct rdf:type owl:NamedIndividual ,
                       agdb:Action .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#RenoDiscounter
+agdb:RenoDiscounter rdf:type owl:NamedIndividual ,
+                             agdb:SimilarUse ;
+                    rdfs:comment "Cards in this category lower the cost of renovation." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#RenoFenceSpace
 agdb:RenoFenceSpace rdf:type owl:NamedIndividual ,
                              agdb:Stage6ActionSpace ;
@@ -778,6 +826,12 @@ agdb:ReturningHomePhase rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#RevisedVersion
 agdb:RevisedVersion rdf:type owl:NamedIndividual ,
                              agdb:GameVersion .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#RoomDiscounter
+agdb:RoomDiscounter rdf:type owl:NamedIndividual ,
+                             agdb:SimilarUse ;
+                    rdfs:comment "Cards in this category provide discounts to the cost of building new rooms." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#SPAct
@@ -835,6 +889,12 @@ agdb:Stone rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#StoneHouseRoom
 agdb:StoneHouseRoom rdf:type owl:NamedIndividual ,
                              agdb:Room .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#TPCombo
+agdb:TPCombo rdf:type owl:NamedIndividual ,
+                      agdb:SimilarUse ;
+             rdfs:comment "The category of cards that add effects to the Traveling Players action space." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#TPSpace
@@ -1096,6 +1156,12 @@ agdb:WorkPhase rdf:type owl:NamedIndividual ,
 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#3WoodSpace> rdf:type owl:NamedIndividual ,
                                                                                           agdb:BoardActionSpace ;
                                                                                  rdfs:label "3 Wood" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4WOcc
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4WOcc> rdf:type owl:NamedIndividual ,
+                                                                                     agdb:SimilarUse ;
+                                                                            rdfs:comment "The category of cards that offer a diminishing number of building resources (usually wood) depending on the number of rounds left to play. Cards in this category offer global bonus points." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#4WoodSpace
