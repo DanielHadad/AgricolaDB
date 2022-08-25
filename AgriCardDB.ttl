@@ -626,6 +626,12 @@ agdb:MinorPlowGrp rdf:type owl:NamedIndividual ,
                   rdfs:comment "The category of cards that count as minor Plows" .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#NextFGWithout
+agdb:NextFGWithout rdf:type owl:NamedIndividual ,
+                            agdb:SimilarUse ;
+                   rdfs:comment "The category of cards that allow the player to use the Stage 2 FG action space even without room in their home." .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#NurFG
 agdb:NurFG rdf:type owl:NamedIndividual ,
                     agdb:Strategy ;
@@ -1075,6 +1081,46 @@ agdb:UnfencedStable rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UnusedSpace
 agdb:UnusedSpace rdf:type owl:NamedIndividual ,
                           agdb:FarmyardSpace .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UweActionBooster
+agdb:UweActionBooster rdf:type owl:NamedIndividual ,
+                               agdb:UweRevised .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UweBRProvider
+agdb:UweBRProvider rdf:type owl:NamedIndividual ,
+                            agdb:UweRevised .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UweCropProvider
+agdb:UweCropProvider rdf:type owl:NamedIndividual ,
+                              agdb:UweRevised .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UweFarmPlanner
+agdb:UweFarmPlanner rdf:type owl:NamedIndividual ,
+                             agdb:UweRevised .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UweFoodProvider
+agdb:UweFoodProvider rdf:type owl:NamedIndividual ,
+                              agdb:UweRevised .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UweGoodsProvider
+agdb:UweGoodsProvider rdf:type owl:NamedIndividual ,
+                               agdb:UweRevised .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UweLivestockProvider
+agdb:UweLivestockProvider rdf:type owl:NamedIndividual ,
+                                   agdb:UweRevised .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#UwePointsProvider
+agdb:UwePointsProvider rdf:type owl:NamedIndividual ,
+                                agdb:UweRevised .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#VPGrp
