@@ -380,6 +380,11 @@ agdb:BuildStableAct rdf:type owl:NamedIndividual ,
                              agdb:Action .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#CHGrp
+agdb:CHGrp rdf:type owl:NamedIndividual ,
+                    agdb:Designation .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cattle
 agdb:Cattle rdf:type owl:NamedIndividual ,
                      agdb:Animal .
@@ -476,6 +481,11 @@ agdb:FGWithoutRoomAct rdf:type owl:NamedIndividual ,
 agdb:FGWithoutRoomSpace rdf:type owl:NamedIndividual ,
                                  agdb:Stage5ActionSpace ;
                         rdfs:label "Family Growth even without space in your home" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FPGrp
+agdb:FPGrp rdf:type owl:NamedIndividual ,
+                    agdb:Designation .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#FeedingEngine
