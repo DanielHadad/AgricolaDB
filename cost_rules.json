@@ -1,0 +1,1 @@
+{"Collections":[{"sheetName":"CardCost","startColumn":"A","endColumn":"A","startRow":"2","endRow":"51","comment":"Direct Goods Cost","rule":"Individual: @A* (mm:camelCaseEncode mm:prefix\u003d\"AgriCardDB\")\n\n\tTypes: CardCost\n\tFacts: hasValue @B*,\n\thasAmount @C* (xsd:integer)","active":true}]}
