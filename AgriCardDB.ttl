@@ -61,6 +61,10 @@ agdb:Card rdf:type owl:Class ;
           rdfs:comment "The class of cards that can be added to a player's farm." .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#CardCost
+agdb:CardCost rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#CardSet
 agdb:CardSet rdf:type owl:Class ;
              rdfs:comment "A class for various collections of cards, representing either officially published decks or player-selected collections from a variety of published decks." .
