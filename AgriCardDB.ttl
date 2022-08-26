@@ -466,6 +466,356 @@ agdb:ClayHutRoom rdf:type owl:NamedIndividual ,
                           agdb:Room .
 
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost1Bo
+agdb:Cost1Bo rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:WildBoar ;
+             agdb:hasAmount 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost1C
+agdb:Cost1C rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Clay ;
+            agdb:hasAmount 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost1Ca
+agdb:Cost1Ca rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:Cattle ;
+             agdb:hasAmount 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost1F
+agdb:Cost1F rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Food ;
+            agdb:hasAmount 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost1G
+agdb:Cost1G rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Grain ;
+            agdb:hasAmount 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost1R
+agdb:Cost1R rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Reed ;
+            agdb:hasAmount 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost1S
+agdb:Cost1S rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Stone ;
+            agdb:hasAmount 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost1Sh
+agdb:Cost1Sh rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:Sheep ;
+             agdb:hasAmount 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost1V
+agdb:Cost1V rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Vegetable ;
+            agdb:hasAmount 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost1W
+agdb:Cost1W rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Wood ;
+            agdb:hasAmount 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost2Bo
+agdb:Cost2Bo rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:WildBoar ;
+             agdb:hasAmount 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost2C
+agdb:Cost2C rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Clay ;
+            agdb:hasAmount 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost2Ca
+agdb:Cost2Ca rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:Cattle ;
+             agdb:hasAmount 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost2F
+agdb:Cost2F rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Food ;
+            agdb:hasAmount 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost2G
+agdb:Cost2G rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Grain ;
+            agdb:hasAmount 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost2R
+agdb:Cost2R rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Reed ;
+            agdb:hasAmount 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost2S
+agdb:Cost2S rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Stone ;
+            agdb:hasAmount 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost2Sh
+agdb:Cost2Sh rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:Sheep ;
+             agdb:hasAmount 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost2V
+agdb:Cost2V rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Vegetable ;
+            agdb:hasAmount 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost2W
+agdb:Cost2W rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Wood ;
+            agdb:hasAmount 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost3Bo
+agdb:Cost3Bo rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:WildBoar ;
+             agdb:hasAmount 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost3C
+agdb:Cost3C rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Clay ;
+            agdb:hasAmount 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost3Ca
+agdb:Cost3Ca rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:Cattle ;
+             agdb:hasAmount 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost3F
+agdb:Cost3F rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Food ;
+            agdb:hasAmount 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost3G
+agdb:Cost3G rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Grain ;
+            agdb:hasAmount 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost3R
+agdb:Cost3R rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Reed ;
+            agdb:hasAmount 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost3S
+agdb:Cost3S rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Stone ;
+            agdb:hasAmount 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost3Sh
+agdb:Cost3Sh rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:Sheep ;
+             agdb:hasAmount 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost3V
+agdb:Cost3V rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Vegetable ;
+            agdb:hasAmount 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost3W
+agdb:Cost3W rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Wood ;
+            agdb:hasAmount 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost4Bo
+agdb:Cost4Bo rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:WildBoar ;
+             agdb:hasAmount 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost4C
+agdb:Cost4C rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Clay ;
+            agdb:hasAmount 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost4Ca
+agdb:Cost4Ca rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:Cattle ;
+             agdb:hasAmount 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost4F
+agdb:Cost4F rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Food ;
+            agdb:hasAmount 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost4G
+agdb:Cost4G rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Grain ;
+            agdb:hasAmount 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost4R
+agdb:Cost4R rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Reed ;
+            agdb:hasAmount 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost4S
+agdb:Cost4S rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Stone ;
+            agdb:hasAmount 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost4Sh
+agdb:Cost4Sh rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:Sheep ;
+             agdb:hasAmount 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost4V
+agdb:Cost4V rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Vegetable ;
+            agdb:hasAmount 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost4W
+agdb:Cost4W rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Wood ;
+            agdb:hasAmount 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost5Bo
+agdb:Cost5Bo rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:WildBoar ;
+             agdb:hasAmount 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost5C
+agdb:Cost5C rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Clay ;
+            agdb:hasAmount 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost5Ca
+agdb:Cost5Ca rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:Cattle ;
+             agdb:hasAmount 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost5F
+agdb:Cost5F rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Food ;
+            agdb:hasAmount 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost5G
+agdb:Cost5G rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Grain ;
+            agdb:hasAmount 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost5R
+agdb:Cost5R rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Reed ;
+            agdb:hasAmount 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost5S
+agdb:Cost5S rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Stone ;
+            agdb:hasAmount 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost5Sh
+agdb:Cost5Sh rdf:type owl:NamedIndividual ,
+                      agdb:CardCost ;
+             agdb:hasValue agdb:Sheep ;
+             agdb:hasAmount 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost5V
+agdb:Cost5V rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Vegetable ;
+            agdb:hasAmount 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#Cost5W
+agdb:Cost5W rdf:type owl:NamedIndividual ,
+                     agdb:CardCost ;
+            agdb:hasValue agdb:Wood ;
+            agdb:hasAmount 5 .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#DLSpace
 agdb:DLSpace rdf:type owl:NamedIndividual ,
                       agdb:BoardActionSpace ;
