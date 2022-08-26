@@ -417,10 +417,10 @@ agdb:BakeAct rdf:type owl:NamedIndividual ,
                       agdb:Action .
 
 
-###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BeggingCardMarker
-agdb:BeggingCardMarker rdf:type owl:NamedIndividual ,
-                                agdb:GameMarker ;
-                       rdfs:comment "Whenever a player cannot adequately feed their family during a harvest, or via the effects of certain cards, a player must add a Begging Card to their farm. At the end of the game, each Begging Card is worth -3 points." .
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BeggingCardToken
+agdb:BeggingCardToken rdf:type owl:NamedIndividual ,
+                               agdb:GameMarker ;
+                      rdfs:comment "Whenever a player cannot adequately feed their family during a harvest, or via the effects of certain cards, a player must add a Begging Card to their farm. At the end of the game, each Begging Card is worth -3 points." .
 
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriCardDB#BuildFencesAct
