@@ -1,0 +1,1822 @@
+@prefix : <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix agdb: <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#> .
+
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#> rdf:type owl:Ontology ;
+                                                                      rdfs:comment "A semantic card database for the board game Agricola." .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##addsToFuture
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##addsToFuture> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:comment "Some cards have the effect of adding items to the start of future rounds." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##alters
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##alters> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:comment "Many cards change the way that the player or their opponents interact with action spaces by altering the effect of using them." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##categorizedBy
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##categorizedBy> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:comment "In this model categories include strategies, activation requirements, effect similarity, and other broad taxonomic considerations." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##costs
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##costs> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##costsOptionally
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##costsOptionally> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##counters
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##counters> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:comment "Some cards counter the strategy set up by an opponent. Often, by producing a passive benefit whenever an opponent uses an action space that their strategy relies on." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##givesAction
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##givesAction> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:subPropertyOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##givesActionOrEffect> ;
+                                                                                 rdfs:comment "An action space or a card is related to an action or actions if using the action space or the card gives the player the ability to take that action or actions." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##givesActionOrEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##givesActionOrEffect> rdf:type owl:ObjectProperty ;
+                                                                                         rdfs:comment "Action spaces and card effects give the player the ability to perform an action or actions or to resolve certain effects." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##givesEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##givesEffect> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:subPropertyOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##givesActionOrEffect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAuthor
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAuthor> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##mentions
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##mentions> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:comment "Some cards specifically name other cards in their interactions" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##occursIn
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##occursIn> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:comment "Many effects have specific phases in which their effects resolve." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##partOf
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##partOf> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:comment "Cards are parts of Card Sets and Game Versions" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##provides
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##provides> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:comment "A catchall property that has some in-game item as its object." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##requires
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##requires> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:comment "Some cards can only be activated when a player's farm meets certain conditions." .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasDeckID
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasDeckID> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasMinPlayerCount
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasMinPlayerCount> rdf:type owl:DatatypeProperty ;
+                                                                                       rdfs:range xsd:nonNegativeInteger .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasText
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasText> rdf:type owl:DatatypeProperty ;
+                                                                             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##worthVP
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##worthVP> rdf:type owl:DatatypeProperty ;
+                                                                             rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ActionOrEffect> ;
+                                                                            owl:disjointWith <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ActionOrEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ActionOrEffect> rdf:type owl:Class ;
+                                                                                    rdfs:comment "The actions made available to players through placing person tokens on action spaces and/or resolving played cards. Additionally, the effects of using certain cards. Card effects might produce similar results to taking actions, but these are technically different." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ActionSpace> rdf:type owl:Class ;
+                                                                                 rdfs:comment "The board spaces that players place their person tokens on during their turn. Each action space allows the player to take a specific set of one or two actions." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Animal
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Animal> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GoodsAndFood> ;
+                                                                            owl:disjointWith <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Resource> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Banlist
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Banlist> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardSet> ;
+                                                                             rdfs:comment "Cards that are frequently removed from their respective decks because they are deemed anti-competitive or create problematic and confusing rule interactions." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BoardActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BoardActionSpace> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ActionSpace> ;
+                                                                                      owl:disjointWith <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerCountActionSpace> ,
+                                                                                                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RoundActionSpace> ;
+                                                                                      rdfs:comment "The actions spaces that are always available from the start of round 1 regardless of player count." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BuildingResource
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BuildingResource> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Resource> ;
+                                                                                      owl:disjointWith <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Crop> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Card
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Card> rdf:type owl:Class ;
+                                                                          rdfs:comment "The class of cards that can be added to a player's farm." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardSet
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardSet> rdf:type owl:Class ;
+                                                                             rdfs:comment "A class for various collections of cards, representing either officially published decks or player-selected collections from a variety of published decks." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Category
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Category> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Crop
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Crop> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Resource> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Deck
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Deck> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardSet> ;
+                                                                          owl:disjointWith <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerCollection> ;
+                                                                          rdfs:comment "A collection of cards that has been officially published or unofficially recognized as a specific set by community consensus." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Designation
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Designation> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Category> ;
+                                                                                 rdfs:comment "Category subclass reserved for groups that are explicitly referenced by other cards." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ActionOrEffect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FarmyardSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FarmyardSpace> rdf:type owl:Class ;
+                                                                                   rdfs:comment "Individuals in this class represent the various ways that squares on a player's board can be configured." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Field
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Field> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FarmyardSpace> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GameMarker
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GameMarker> rdf:type owl:Class ;
+                                                                                rdfs:comment "The various physical tokens (excluding room and field tiles) used in the game." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GameVersion
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GameVersion> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GoodsAndFood
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GoodsAndFood> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GameMarker> ;
+                                                                                  owl:disjointWith <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerToken> ;
+                                                                                  rdfs:comment "Individuals in this class represent the tokens for animals, resources, and food. There are no quantity limits on these tokens. Note: in the revised version of the game, food also counts as a good." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##HarvestPhase
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##HarvestPhase> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Phase> ;
+                                                                                  rdfs:comment "In rounds that end with a harvest, the game enters the harvest phase after the returning home phase is completed. The harvest is further sub-divided into three phases." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Improvement
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Improvement> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Card> ;
+                                                                                 owl:disjointWith <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Occupation> ;
+                                                                                 rdfs:comment "The class of Improvements" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##MajorImp
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##MajorImp> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Improvement> ;
+                                                                              owl:disjointWith <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##MinorImp> ;
+                                                                              rdfs:comment "The class of fixed, communal Major Improvements." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##MinorImp
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##MinorImp> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Improvement> ;
+                                                                              rdfs:comment "The class of Minor Improvements that are dealt into players' hands along with Occupations." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Occupation
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Occupation> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Card> ;
+                                                                                rdfs:comment "The class of Occupations that are dealt into players' hands alongside Minor Improvements." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Phase
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Phase> rdf:type owl:Class ;
+                                                                           rdfs:comment "Each round proceeds in phases. The phase order is Preparation, Work, ReturningHome, and Harvest (for rounds that end in a harvest)." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerCollection
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerCollection> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardSet> ;
+                                                                                      rdfs:comment "A collection of cards from various decks curated by a player or players. May change over time." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerCountActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerCountActionSpace> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ActionSpace> ;
+                                                                                            owl:disjointWith <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RoundActionSpace> ;
+                                                                                            rdfs:comment "The action spaces that are always available from the start of round 1, depending on the number of players in the game." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerToken
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerToken> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GameMarker> ;
+                                                                                 rdfs:comment "The colored game pieces given to each player during game set up. These represent fixed quantities." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PublishedDeck
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PublishedDeck> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Deck> ;
+                                                                                   owl:disjointWith <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UnofficialDeck> ;
+                                                                                   rdfs:comment "Individuals in this class represent decks that have been officially published." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Resource
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Resource> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GoodsAndFood> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Room
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Room> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FarmyardSpace> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RoundActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RoundActionSpace> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ActionSpace> ;
+                                                                                      rdfs:comment "The action spaces that become available as the game progresses from one round to the next." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Category> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage1ActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage1ActionSpace> rdf:type owl:Class ;
+                                                                                       owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                             owl:oneOf ( <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FencesSpace>
+                                                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##MajorMinorSpace>
+                                                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SowBakeSpace>
+                                                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1SheepSpace>
+                                                                                                                       )
+                                                                                                           ] ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RoundActionSpace> ;
+                                                                                       rdfs:comment "The action spaces that become available at the start of rounds 1, 2, 3, and 4." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage2ActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage2ActionSpace> rdf:type owl:Class ;
+                                                                                       owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                             owl:oneOf ( <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FGSpace>
+                                                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RenoImpSpace>
+                                                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1StoneStage2Space>
+                                                                                                                       )
+                                                                                                           ] ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RoundActionSpace> ;
+                                                                                       rdfs:comment "The action spaces that become available at the start of rounds 5, 6, and 7." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage3ActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage3ActionSpace> rdf:type owl:Class ;
+                                                                                       owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                             owl:oneOf ( <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Take1VegSpace>
+                                                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1BoarSpace>
+                                                                                                                       )
+                                                                                                           ] ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RoundActionSpace> ;
+                                                                                       rdfs:comment "The action spaces that become available at the start of rounds 8 and 9." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage4ActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage4ActionSpace> rdf:type owl:Class ;
+                                                                                       owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                             owl:oneOf ( <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1CowSpace>
+                                                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1StoneStage4Space>
+                                                                                                                       )
+                                                                                                           ] ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RoundActionSpace> ;
+                                                                                       rdfs:comment "The action spaces that become available at the start of rounds 10 and 11." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage5ActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage5ActionSpace> rdf:type owl:Class ;
+                                                                                       owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                             owl:oneOf ( <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FGWithoutRoomSpace>
+                                                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlowSowSpace>
+                                                                                                                       )
+                                                                                                           ] ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RoundActionSpace> ;
+                                                                                       rdfs:comment "The action spaces that become available at the start of rounds 12 and 13." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage6ActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage6ActionSpace> rdf:type owl:Class ;
+                                                                                       owl:equivalentClass [ rdf:type owl:Class ;
+                                                                                                             owl:oneOf ( <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RenoFenceSpace>
+                                                                                                                       )
+                                                                                                           ] ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RoundActionSpace> ;
+                                                                                       rdfs:comment "The action space that becomes available at the start of round 14." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Strategy
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Strategy> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Category> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UnofficialDeck
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UnofficialDeck> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Deck> ;
+                                                                                    rdfs:comment "Individuals in this class represent decks that have not been officially published but are recognized by the play-agricola community as constituting a singular deck." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweRevised
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweRevised> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Category> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1PlusOccupation
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1PlusOccupation> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Occupation> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3PlayerActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3PlayerActionSpace> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerCountActionSpace> ;
+                                                                                        rdfs:comment "The action spaces that are placed on the game board during set up for a 3 player game." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3PlusOccupation
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3PlusOccupation> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Occupation> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4PlayerActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4PlayerActionSpace> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerCountActionSpace> ;
+                                                                                        rdfs:comment "The action spaces that are placed on the game board during set up for a 4 player game." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4PlusOccupation
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4PlusOccupation> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Occupation> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##5PlayerActionSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##5PlayerActionSpace> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerCountActionSpace> ;
+                                                                                        rdfs:comment "The action spaces that are placed on the game board during set up for a 5 player game." .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BakeAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BakeAct> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BeggingCardToken
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BeggingCardToken> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GameMarker> ;
+                                                                                      rdfs:comment "Whenever a player cannot adequately feed their family during a harvest, or via the effects of certain cards, a player must add a Begging Card to their farm. At the end of the game, each Begging Card is worth -3 points." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BigHouse
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BigHouse> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Strategy> ;
+                                                                              rdfs:comment "A strategic approach where the player builds a house with a large number (5+) of rooms." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BigImpPoints
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BigImpPoints> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Strategy> ;
+                                                                                  rdfs:comment "A strategic approach where the player aims to acquire a large number of victory points from building Improvements." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BonusGrp
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BonusGrp> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Designation> ;
+                                                                              rdfs:comment "Category of cards that have a symbol for positive or negative bonus points" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BreadGrp
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BreadGrp> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Designation> ;
+                                                                              rdfs:comment "Category of cards that have the Bake Bread symbol" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BuildFencesAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BuildFencesAct> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BuildRoomAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BuildRoomAct> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BuildSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BuildSpace> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BoardActionSpace> ;
+                                                                                rdfs:label "Build Room(s) and/or Stable(s)" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BuildStableAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BuildStableAct> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CHGrp
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CHGrp> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Designation> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cattle
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cattle> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Animal> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CheapOccSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CheapOccSpace> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BoardActionSpace> ;
+                                                                                   rdfs:comment "A player's first occupation is free, each additional one costs 1 Food" ;
+                                                                                   rdfs:label "1 Occupation" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Clay
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Clay> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BuildingResource> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ClayHutRoom
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ClayHutRoom> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Room> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CookGrp
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CookGrp> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Designation> ;
+                                                                             rdfs:comment "Category of improvments with the cooking symbol." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1Bo
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1Bo> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##WildBoar> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1C
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1C> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Clay> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1Ca
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1Ca> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cattle> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1F
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1F> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Food> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1G
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1G> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Grain> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1R
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1R> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Reed> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1S
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1S> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stone> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1Sh
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1Sh> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Sheep> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1V
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1V> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Vegetable> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1W
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost1W> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Wood> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2Bo
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2Bo> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##WildBoar> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2C
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2C> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Clay> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2Ca
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2Ca> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cattle> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2F
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2F> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Food> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2G
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2G> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Grain> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2R
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2R> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Reed> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2S
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2S> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stone> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2Sh
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2Sh> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Sheep> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2V
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2V> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Vegetable> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2W
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost2W> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Wood> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3Bo
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3Bo> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##WildBoar> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3C
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3C> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Clay> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3Ca
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3Ca> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cattle> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3F
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3F> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Food> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3G
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3G> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Grain> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3R
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3R> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Reed> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3S
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3S> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stone> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3Sh
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3Sh> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Sheep> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3V
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3V> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Vegetable> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3W
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost3W> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Wood> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4Bo
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4Bo> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##WildBoar> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4C
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4C> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Clay> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4Ca
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4Ca> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cattle> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4F
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4F> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Food> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4G
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4G> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Grain> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4R
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4R> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Reed> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4S
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4S> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stone> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4Sh
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4Sh> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Sheep> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4V
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4V> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Vegetable> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4W
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost4W> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Wood> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5Bo
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5Bo> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##WildBoar> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5C
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5C> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Clay> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5Ca
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5Ca> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cattle> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5F
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5F> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Food> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5G
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5G> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Grain> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5R
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5R> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Reed> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5S
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5S> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stone> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5Sh
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5Sh> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Sheep> ;
+                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5V
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5V> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Vegetable> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5W
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Cost5W> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Wood> ;
+                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##DLCombo
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##DLCombo> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                             rdfs:comment "The category of cards that add effects to the Day Laborer action space." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##DLSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##DLSpace> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BoardActionSpace> ;
+                                                                             rdfs:label "Day Laborer" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##E
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##E> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PublishedDeck> ;
+                                                                       rdfs:label "E Deck" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##EarlyClayRen
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##EarlyClayRen> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Strategy> ;
+                                                                                  rdfs:comment "A strategic approach where the player renovated to Clay early to leverage the effect of particular cards." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##EarlyCrops
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##EarlyCrops> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Strategy> ;
+                                                                                rdfs:comment "A strategic approach where the player plows fields and sows grain and/or vegetables in the early Stages of the game." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##EarlyStoneRen
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##EarlyStoneRen> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Strategy> ;
+                                                                                   rdfs:comment "A strategic approach where the player renovates to Stone early to leverage the effects of particular cards." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##EmptyField
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##EmptyField> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Field> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ExpensiveOccSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ExpensiveOccSpace> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4PlayerActionSpace> ;
+                                                                                       rdfs:comment "A player's first and second Occupation cost 1 Food each. Each Occupation after that costs 2 Food." ;
+                                                                                       rdfs:label "1 Occupation" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FGAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FGAct> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FGSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FGSpace> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage2ActionSpace> ;
+                                                                             rdfs:label "After Family Growth also 1 Minor Improvement" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FGWithoutRoomAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FGWithoutRoomAct> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FGWithoutRoomSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FGWithoutRoomSpace> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage5ActionSpace> ;
+                                                                                        rdfs:label "Family Growth even without space in your home" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FPGrp
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FPGrp> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Designation> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FeedingEngine
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FeedingEngine> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                                   rdfs:comment "The category of cards that are an important part of creating sustainable feeding for the player." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Fence
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Fence> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerToken> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FencedStable
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FencedStable> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FarmyardSpace> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FencesSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FencesSpace> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage1ActionSpace> ;
+                                                                                 rdfs:label "Fences" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FishCombo
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FishCombo> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                               rdfs:comment "The category of cards that add effects to the Fishing action space." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FishingSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FishingSpace> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BoardActionSpace> ;
+                                                                                  rdfs:label "Fishing" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Food
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Food> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GoodsAndFood> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Fr
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Fr> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PublishedDeck> ;
+                                                                        rdfs:label "France Deck" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##G
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##G> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PublishedDeck> ;
+                                                                       rdfs:label "Gamer Deck" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##G4
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##G4> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UnofficialDeck> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##G5
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##G5> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UnofficialDeck> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##G6
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##G6> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UnofficialDeck> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##G7
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##G7> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UnofficialDeck> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GetBreedingPair
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GetBreedingPair> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Strategy> ;
+                                                                                     rdfs:comment "A strategic approach where the player gains the ability to hold at least 3 animals of the same kind" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Grain
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Grain> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Crop> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GuestToken
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GuestToken> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GameMarker> ;
+                                                                                rdfs:comment "A token representing a temporary person on a player's farm or the board." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GuildGrp
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GuildGrp> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Designation> ;
+                                                                              rdfs:comment "The category including the Joinery, Pottery, Basket Maker's Workshop, and their respective upgrades." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##HarvestBreedingPhase
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##HarvestBreedingPhase> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##HarvestPhase> ;
+                                                                                          rdfs:comment "If a player has at least two animals of the same type, the animals breed to process a newborn animal. The newborn animal must be housed on the player's farm and cannot be converted to food during this phase." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##HarvestFeedingPhase
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##HarvestFeedingPhase> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##HarvestPhase> ;
+                                                                                         rdfs:comment "In this phase, players must pay an appropriate amount of Food in order to feed their families." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##HarvestFieldPhase
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##HarvestFieldPhase> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##HarvestPhase> ;
+                                                                                       rdfs:comment "The first phase of a harvest. Many card effects resolve during this phase. Fields are harvested." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##HarvestFood
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##HarvestFood> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                                 rdfs:comment "The category of cards that provide food during the Harvest, either passively through met farm conditions, or by allowing the conversion of Goods to Food during the Harvest specifically." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##I
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##I> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PublishedDeck> ;
+                                                                       rdfs:label "I Deck" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##K
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##K> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PublishedDeck> ;
+                                                                       rdfs:label "K Deck" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##MajorMinorSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##MajorMinorSpace> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage1ActionSpace> ;
+                                                                                     rdfs:label "1 Major or Minor Improvement" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##MakeUnblockable
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##MakeUnblockable> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                                     rdfs:comment "Cards in this category allow players to use specific action spaces even if they are occupied by an opponent" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##MinorPlowGrp
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##MinorPlowGrp> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Designation> ;
+                                                                                  rdfs:comment "The category of cards that count as minor Plows" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##NextFGWithout
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##NextFGWithout> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                                   rdfs:comment "The category of cards that allow the player to use the Stage 2 FG action space even without room in their home." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##NurFG
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##NurFG> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Strategy> ;
+                                                                           rdfs:comment "A strategic approach in which the player aims to acquire resources to build one or more additional rooms and grow their family as soon as possible." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##OccOrFGSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##OccOrFGSpace> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##5PlayerActionSpace> ;
+                                                                                  rdfs:comment "A player's first and second Occupations cost 1 Food each. Each additional Occupation costs 2 Food" ;
+                                                                                  rdfs:label "1 Occupation or, From Round 5, Family Growth" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##OnceInClay
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##OnceInClay> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                                rdfs:comment "The category of cards that have no effect unless the player lives in (at least) a Clay Hut." ,
+                                                                                             "The category of cards that have no effect unless the player lives in a Stone House." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##OnceInStone
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##OnceInStone> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##OriginalVersion
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##OriginalVersion> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GameVersion> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##OvenGrp
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##OvenGrp> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Designation> ;
+                                                                             rdfs:comment "Category of improvements that count as Ovens" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PassingMinor
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PassingMinor> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Designation> ;
+                                                                                  rdfs:comment "The category of minor improvements that must be passed to another player after being played." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Pasture
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Pasture> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FarmyardSpace> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Person
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Person> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerToken> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlantedField
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlantedField> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Field> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayByStage1
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayByStage1> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                                  rdfs:comment "A small category of cards that must be played before the end of Stage 1. There are other cards with timing requirements, but it is worth noting this special subset." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayMajorMinorAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayMajorMinorAct> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayMinorAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayMinorAct> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayOccAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayOccAct> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedImp
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedImp> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FarmyardSpace> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedOcc
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedOcc> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FarmyardSpace> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlowAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlowAct> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlowCombo
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlowCombo> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                               rdfs:comment "The category of cards that affect the Plow 1 Field space" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlowSowSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlowSowSpace> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage5ActionSpace> ;
+                                                                                  rdfs:label "Plow 1 Field and/or Sow" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlowSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlowSpace> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BoardActionSpace> ;
+                                                                               rdfs:label "Plow 1 Field" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PointCeiling
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PointCeiling> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                                  rdfs:comment "Cards in this category are used primarily to award victory points to the player directly without aiding in farm development." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PondGrp
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PondGrp> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                             rdfs:comment "The category of mostly point-granting minors with no play cost that add food and/or resources to future round spaces." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PreparationPhase
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PreparationPhase> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Phase> ;
+                                                                                      rdfs:comment "The first phase of a round. The new round card is flipped face up and the appropriate items are added to the board." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##QueueJumper
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##QueueJumper> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                                 rdfs:comment "Cards in this category aid the player in using the FG action space \"out of turn\"." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RSFSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RSFSpace> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4PlayerActionSpace> ;
+                                                                              rdfs:comment "Take 1 Reed, 1 Stone, and 1 Food" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveAnimalEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveAnimalEffect> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveBREffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveBREffect> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveBoarEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveBoarEffect> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveClayEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveClayEffect> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveCowEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveCowEffect> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveEffect> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveFenceEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveFenceEffect> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveFieldEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveFieldEffect> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveFoodEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveFoodEffect> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveGoodEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveGoodEffect> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveGrainEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveGrainEffect> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveReedEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveReedEffect> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveRenoEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveRenoEffect> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveResourceEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveResourceEffect> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveRoomEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveRoomEffect> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveSheepEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveSheepEffect> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveStableEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveStableEffect> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveStoneEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveStoneEffect> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveVegEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveVegEffect> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveWoodEffect
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReceiveWoodEffect> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Effect> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Reed
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Reed> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BuildingResource> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RenoAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RenoAct> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RenoDiscounter
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RenoDiscounter> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                                    rdfs:comment "Cards in this category lower the cost of renovation." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RenoFenceSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RenoFenceSpace> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage6ActionSpace> ;
+                                                                                    rdfs:label "After Renovation also Fences" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RenoImpSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RenoImpSpace> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage2ActionSpace> ;
+                                                                                  rdfs:label "After Renovation also 1 Major or Minor Improvement" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReturningHomePhase
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##ReturningHomePhase> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Phase> ;
+                                                                                        rdfs:comment "The clean-up phase before the end of the round (in rounds without a harvest) or the start of a harvest. Many card effects resolve during this phase. All players return their person tokens to their farms." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RevisedVersion
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RevisedVersion> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GameVersion> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RoomDiscounter
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##RoomDiscounter> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                                    rdfs:comment "Cards in this category provide discounts to the cost of building new rooms." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SPAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SPAct> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SPSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SPSpace> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BoardActionSpace> ;
+                                                                             rdfs:label "Starting Player and/or Minor Improvement" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SPToken
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SPToken> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##GameMarker> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Sheep
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Sheep> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Animal> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SowAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SowAct> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SowBakeSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SowBakeSpace> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage1ActionSpace> ;
+                                                                                  rdfs:label "Sow and/or Bake Bread" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SownGField
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SownGField> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Field> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SownVField
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SownVField> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Field> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stable
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stable> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayerToken> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stone
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stone> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BuildingResource> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##StoneHouseRoom
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##StoneHouseRoom> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Room> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TPCombo
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TPCombo> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                             rdfs:comment "The category of cards that add effects to the Traveling Players action space." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TPSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TPSpace> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4PlayerActionSpace> ;
+                                                                             rdfs:comment "Traveling Players" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Take1VegSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Take1VegSpace> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage3ActionSpace> ;
+                                                                                   rdfs:label "Take 1 Vegetable" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeAct> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeAnimalAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeAnimalAct> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeBRAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeBRAct> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeBoar
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeBoar> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeClayAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeClayAct> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeCowAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeCowAct> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeFoodAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeFoodAct> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeGoodAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeGoodAct> rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeGrainAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeGrainAct> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeGrainSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeGrainSpace> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BoardActionSpace> ;
+                                                                                    rdfs:label "Take 1 Grain" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeReedAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeReedAct> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeResourceAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeResourceAct> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeSheepAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeSheepAct> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeStoneAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeStoneAct> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeVegAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeVegAct> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeWoodAct
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##TakeWoodAct> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UnfencedStable
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UnfencedStable> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FarmyardSpace> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UnusedSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UnusedSpace> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##FarmyardSpace> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweActionBooster
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweActionBooster> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweRevised> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweBRProvider
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweBRProvider> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweRevised> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweCropProvider
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweCropProvider> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweRevised> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweFarmPlanner
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweFarmPlanner> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweRevised> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweFoodProvider
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweFoodProvider> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweRevised> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweGoodsProvider
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweGoodsProvider> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweRevised> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweLivestockProvider
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweLivestockProvider> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweRevised> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UwePointsProvider
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UwePointsProvider> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweRevised> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##VPGrp
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##VPGrp> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Designation> ;
+                                                                           rdfs:comment "The category of cards that have the symbol for granting positive or negative Victory Points" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Vegetable
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Vegetable> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Crop> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##WellGrp
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##WellGrp> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Designation> ;
+                                                                             rdfs:comment "Category of improvements that count as Wells" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##WildBoar
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##WildBoar> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Animal> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Wm
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Wm> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PublishedDeck> ;
+                                                                        rdfs:label "World Championship Deck" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Wood
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Wood> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BuildingResource> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##WoodHutRoom
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##WoodHutRoom> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Room> .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##WorkPhase
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##WorkPhase> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Phase> ;
+                                                                               rdfs:comment "The round phase in which players use action spaces by placing person and/or guest tokens. Ends when all players have placed all of their available person and guest tokens." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1AnimalSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1AnimalSpace> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##5PlayerActionSpace> ;
+                                                                                  rdfs:label "Take 1 Sheep and 1 Food or Take 1 Wild Boar or Pay 1 Food for 1 Cattle" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1BoarSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1BoarSpace> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage3ActionSpace> ;
+                                                                                rdfs:label "1 Wild Boar" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1ClaySpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1ClaySpace> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BoardActionSpace> ;
+                                                                                rdfs:label "1 Clay" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1CowSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1CowSpace> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage4ActionSpace> ;
+                                                                               rdfs:label "1 Cattle" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1ReedSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1ReedSpace> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BoardActionSpace> ;
+                                                                                rdfs:label "1 Reed" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1ReedStoneWoodSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1ReedStoneWoodSpace> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##5PlayerActionSpace> ;
+                                                                                         rdfs:label "1 Reed. In addition, take 1 Stone and 1 Wood" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1ResourceSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1ResourceSpace> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3PlayerActionSpace> ;
+                                                                                    rdfs:label "Take 1 Building Resource of your choice" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1RoomOrTPSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1RoomOrTPSpace> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##5PlayerActionSpace> ;
+                                                                                    rdfs:label "Build 1 Room or Traveling Players" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1SheepSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1SheepSpace> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage1ActionSpace> ;
+                                                                                 rdfs:label "1 Sheep" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1StoneStage2Space
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1StoneStage2Space> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage2ActionSpace> ;
+                                                                                       rdfs:label "1 Stone" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1StoneStage4Space
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1StoneStage4Space> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage4ActionSpace> ;
+                                                                                       rdfs:label "1 Stone" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1WoodSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1WoodSpace> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4PlayerActionSpace> ;
+                                                                                rdfs:label "1 Wood" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##2ClaySpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##2ClaySpace> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4PlayerActionSpace> ;
+                                                                                rdfs:label "2 Clay" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##2Room
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##2Room> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Strategy> ;
+                                                                           rdfs:comment "A strategic approach where the player does not build any additional rooms." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##2WoodSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##2WoodSpace> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4PlayerActionSpace> ;
+                                                                                rdfs:label "2 Wood" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3ClaySpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3ClaySpace> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##5PlayerActionSpace> ;
+                                                                                rdfs:label "3 Clay" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3Player1ClaySpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3Player1ClaySpace> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3PlayerActionSpace> ;
+                                                                                       rdfs:label "1 Clay" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3Player2WoodSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3Player2WoodSpace> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3PlayerActionSpace> ;
+                                                                                       rdfs:label "2 Wood" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3PlayerExpensiveOccSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3PlayerExpensiveOccSpace> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3PlayerActionSpace> ;
+                                                                                              rdfs:comment "Costs 2 Food" ;
+                                                                                              rdfs:label "1 Occupation" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3Room
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3Room> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Strategy> ;
+                                                                           rdfs:comment "A strategic approach where the player aims to build exactly one additional room over the course of the game." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3WoodSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3WoodSpace> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BoardActionSpace> ;
+                                                                                rdfs:label "3 Wood" .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4WOcc
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4WOcc> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse> ;
+                                                                           rdfs:comment "The category of cards that offer a diminishing number of building resources (usually wood) depending on the number of rounds left to play. Cards in this category offer global bonus points." .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4WoodSpace
+<http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4WoodSpace> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##5PlayerActionSpace> ;
+                                                                                rdfs:label "4 Wood" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Designation>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##SimilarUse>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Strategy>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##UweRevised>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage1ActionSpace>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage2ActionSpace>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage3ActionSpace>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage4ActionSpace>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage5ActionSpace>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Stage6ActionSpace>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##1PlusOccupation>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3PlusOccupation>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4PlusOccupation>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##3PlayerActionSpace>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##4PlayerActionSpace>
+                <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##5PlayerActionSpace>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
