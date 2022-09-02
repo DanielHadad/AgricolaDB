@@ -14,6 +14,10 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#hasPublisher
+agdb:hasPublisher rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##addsToFuture
 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##addsToFuture> rdf:type owl:ObjectProperty ;
                                                                                   rdfs:comment "Some cards have the effect of adding items to the start of future rounds." .
@@ -122,6 +126,14 @@
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#Author
+agdb:Author rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#Publisher
+agdb:Publisher rdf:type owl:Class .
+
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action
 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##Action> rdf:type owl:Class ;
@@ -436,6 +448,11 @@
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#Z-Man
+agdb:Z-Man rdf:type owl:NamedIndividual ,
+                    agdb:Publisher .
+
 
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BakeAct
 <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##BakeAct> rdf:type owl:NamedIndividual ,
