@@ -449,6 +449,83 @@ agdb:Publisher rdf:type owl:Class .
 #    Individuals
 #################################################################
 
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#Cost1Imp
+agdb:Cost1Imp rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedImp> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#Cost1Occ
+agdb:Cost1Occ rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedOcc> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 1 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#Cost2Imp
+agdb:Cost2Imp rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedImp> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#Cost2Occ
+agdb:Cost2Occ rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedOcc> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 2 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#Cost3Imp
+agdb:Cost3Imp rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedImp> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#Cost3Occ
+agdb:Cost3Occ rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedOcc> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 3 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#Cost4Occ
+agdb:Cost4Occ rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedOcc> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 4 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#Cost5Occ
+agdb:Cost5Occ rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedOcc> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 5 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#Cost6Occ
+agdb:Cost6Occ rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedOcc> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 6 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#Cost7Occ
+agdb:Cost7Occ rdf:type owl:NamedIndividual ,
+                       <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedOcc> ;
+              <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 7 .
+
+
+###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#CostNoOcc
+agdb:CostNoOcc rdf:type owl:NamedIndividual ,
+                        <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##CardCost> ;
+               <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasValue> <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##PlayedOcc> ;
+               <http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame##hasAmount> 0 .
+
+
 ###  http://www.semanticweb.org/danielhadad/ontologies/2022/7/AgriGame#Z-Man
 agdb:Z-Man rdf:type owl:NamedIndividual ,
                     agdb:Publisher .
