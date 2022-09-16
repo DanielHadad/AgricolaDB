@@ -41,22 +41,6 @@
           rdfs:comment "Some cards counter the strategy set up by an opponent. Often, by producing a passive benefit whenever an opponent uses an action space that their strategy relies on." .
 
 
-###  http://www.semanticweb.org/danielhadad/AgriGame#givesAction
-:givesAction rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf :givesActionOrEffect ;
-             rdfs:comment "An action space or a card is related to an action or actions if using the action space or the card gives the player the ability to take that action or actions." .
-
-
-###  http://www.semanticweb.org/danielhadad/AgriGame#givesActionOrEffect
-:givesActionOrEffect rdf:type owl:ObjectProperty ;
-                     rdfs:comment "Action spaces and card effects give the player the ability to perform an action or actions or to resolve certain effects." .
-
-
-###  http://www.semanticweb.org/danielhadad/AgriGame#givesEffect
-:givesEffect rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf :givesActionOrEffect .
-
-
 ###  http://www.semanticweb.org/danielhadad/AgriGame#hasAuthor
 :hasAuthor rdf:type owl:ObjectProperty .
 
