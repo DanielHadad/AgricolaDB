@@ -479,6 +479,11 @@
           rdfs:comment "Category of cards that have a symbol for positive or negative bonus points" .
 
 
+###  http://www.semanticweb.org/danielhadad/AgriGame#BonusPointToken
+:BonusPointToken rdf:type owl:NamedIndividual ,
+                          :GameMarker .
+
+
 ###  http://www.semanticweb.org/danielhadad/AgriGame#BreadGrp
 :BreadGrp rdf:type owl:NamedIndividual ,
                    :Designation ;
