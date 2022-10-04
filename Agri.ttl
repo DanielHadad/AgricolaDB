@@ -45,6 +45,11 @@
 :hasAuthor rdf:type owl:ObjectProperty .
 
 
+###  http://www.semanticweb.org/danielhadad/AgriGame#hasPlayer
+:hasPlayer rdf:type owl:ObjectProperty ;
+           rdfs:comment "Every turn of the game is associated with a specific turn player." .
+
+
 ###  http://www.semanticweb.org/danielhadad/AgriGame#hasPublisher
 :hasPublisher rdf:type owl:ObjectProperty .
 
