@@ -157,6 +157,12 @@
           rdfs:range xsd:boolean .
 
 
+###  http://www.semanticweb.org/danielhadad/AgriGame#sitsInSeat
+:sitsInSeat rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:integer ;
+            rdfs:comment "At the start of a game, the starting player for R1 is randomly assigned. On play-agricola this occurs after the draft, but on other platforms the seat order is known prior to drafting." .
+
+
 ###  http://www.semanticweb.org/danielhadad/AgriGame#worthVP
 :worthVP rdf:type owl:DatatypeProperty ;
          rdfs:range xsd:integer .
