@@ -267,6 +267,11 @@
        rdfs:subClassOf :FarmyardSpace .
 
 
+###  http://www.semanticweb.org/danielhadad/AgriGame#GameLog
+:GameLog rdf:type owl:Class ;
+         rdfs:comment "Named inidividuals in this class represent records of full games of Agricola." .
+
+
 ###  http://www.semanticweb.org/danielhadad/AgriGame#GameMarker
 :GameMarker rdf:type owl:Class ;
             rdfs:comment "The various physical tokens (excluding room and field tiles) used in the game." .
@@ -318,6 +323,11 @@
 ###  http://www.semanticweb.org/danielhadad/AgriGame#Phase
 :Phase rdf:type owl:Class ;
        rdfs:comment "Each round proceeds in phases. The phase order is Preparation, Work, ReturningHome, and Harvest (for rounds that end in a harvest)." .
+
+
+###  http://www.semanticweb.org/danielhadad/AgriGame#Player
+:Player rdf:type owl:Class ;
+        rdfs:comment "Named individuals in this class represent actual players in a game of Agricola" .
 
 
 ###  http://www.semanticweb.org/danielhadad/AgriGame#PlayerCollection
