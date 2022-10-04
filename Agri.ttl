@@ -41,8 +41,18 @@
           rdfs:comment "Some cards counter the strategy set up by an opponent. Often, by producing a passive benefit whenever an opponent uses an action space that their strategy relies on." .
 
 
+###  http://www.semanticweb.org/danielhadad/AgriGame#drafts
+:drafts rdf:type owl:ObjectProperty ;
+        rdfs:comment "Decribes the act of a player taking a card from a draft pack into their hand." .
+
+
 ###  http://www.semanticweb.org/danielhadad/AgriGame#hasAuthor
 :hasAuthor rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/danielhadad/AgriGame#hasInOpeningHand
+:hasInOpeningHand rdf:type owl:ObjectProperty ;
+                  rdfs:comment "In drafted games, each player is dealt an initial hand of cards (Occupations first, then Minor Improvements; or both sets simultaenously). Players select one card before passing the rest of their pack. The process is repeated until players' hands contain exactly seven of each type of card." .
 
 
 ###  http://www.semanticweb.org/danielhadad/AgriGame#hasPlayer
