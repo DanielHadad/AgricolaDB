@@ -49,6 +49,11 @@
 :hasPublisher rdf:type owl:ObjectProperty .
 
 
+###  http://www.semanticweb.org/danielhadad/AgriGame#hasTurn
+:hasTurn rdf:type owl:ObjectProperty ;
+         rdfs:comment "A turn of the game, wherein a player places a player token on the board." .
+
+
 ###  http://www.semanticweb.org/danielhadad/AgriGame#hasValue
 :hasValue rdf:type owl:ObjectProperty .
 
@@ -72,6 +77,16 @@
         rdfs:comment "Cards are parts of Card Sets and Game Versions" .
 
 
+###  http://www.semanticweb.org/danielhadad/AgriGame#placesPeepOn
+:placesPeepOn rdf:type owl:ObjectProperty ;
+              rdfs:comment "This property describes the particular board space that a player's peep token occupies during a turn of the game." .
+
+
+###  http://www.semanticweb.org/danielhadad/AgriGame#plays
+:plays rdf:type owl:ObjectProperty ;
+       rdfs:comment "Players will sometimes play cards during their turn." .
+
+
 ###  http://www.semanticweb.org/danielhadad/AgriGame#provides
 :provides rdf:type owl:ObjectProperty ;
           rdfs:comment "A catchall property that has some in-game item as its object." .
@@ -80,6 +95,11 @@
 ###  http://www.semanticweb.org/danielhadad/AgriGame#requires
 :requires rdf:type owl:ObjectProperty ;
           rdfs:comment "Some cards can only be activated when a player's farm meets certain conditions." .
+
+
+###  http://www.semanticweb.org/danielhadad/AgriGame#uses
+:uses rdf:type owl:ObjectProperty ;
+      rdfs:comment "When a player conducts their turn, they use actions on action spaces or by the effect of played cards." .
 
 
 #################################################################
