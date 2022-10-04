@@ -125,9 +125,21 @@
                    rdfs:range xsd:nonNegativeInteger .
 
 
+###  http://www.semanticweb.org/danielhadad/AgriGame#hasRound
+:hasRound rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:integer ;
+          rdfs:comment "The round of the game in which a turn was taken." .
+
+
 ###  http://www.semanticweb.org/danielhadad/AgriGame#hasText
 :hasText rdf:type owl:DatatypeProperty ;
          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/danielhadad/AgriGame#hasTurnCount
+:hasTurnCount rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "Within a round of the game, this data property describes the order in which turns were taken." .
 
 
 ###  http://www.semanticweb.org/danielhadad/AgriGame#isBanned
