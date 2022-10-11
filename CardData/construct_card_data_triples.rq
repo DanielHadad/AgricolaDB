@@ -1,0 +1,139 @@
+PREFIX owl:	<http://www.w3.org/2002/07/owl#>
+PREFIX rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:	<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xml:	<http://www.w3.org/XML/1998/namespace>
+PREFIX xsd:	<http://www.w3.org/2001/XMLSchema#>
+PREFIX ag:	<http://www.semanticweb.org/danielhadad/AgriGame#>
+PREFIX agdb:	<http://www.play-agricola.com/AgriDB#>
+
+CONSTRUCT {
+
+?card a ?cardtype;
+ 	rdfs:label ?label_string;
+ 	ag:partOf ?deck_uri;
+ 	ag:hasDeckID ?ID;
+ 	ag:hasMinPlayerCount ?playcount_num;
+ 	ag:worthVP ?VP_amt;
+ 	ag:hasText ?text_string;
+ 	ag:isBanned ?ban.
+}
+
+WHERE {
+
+BIND (str(tarql:expandPrefix("agdb")) AS ?agdbNamespace).
+BIND (str(tarql:expandPrefix("ag")) AS ?agNamespace).
+BIND (URI(CONCAT(?agdbNamespace, str(?name))) AS ?card).
+BIND (URI(CONCAT(?agNamespace, str(?Type))) AS ?cardtype).
+BIND (xsd:string(?label) as ?label_string).
+BIND (URI(CONCAT(?agNamespace, str(?deck))) AS ?deck_uri).
+BIND (xsd:integer(?deckID) AS ?ID).
+BIND (xsd:integer(?playercount) AS  ?playcount_num).
+BIND (xsd:integer(?VP) AS ?VP_amt).
+BIND (xsd:string(?text) AS ?text_string).
+BIND (xsd:boolean(?banned) AS ?ban).
+}
+CONSTRUCT {
+
+?card ag:costs ?cost_uri;
+}
+
+WHERE {
+
+BIND (str(tarql:expandPrefix("agdb")) AS ?agdbNamespace).
+BIND (str(tarql:expandPrefix("ag")) AS ?agNamespace).
+BIND (URI(CONCAT(?agdbNamespace, str(?name))) AS ?card).
+?costsplit apf:strSplit (?cost ";").
+BIND (URI(CONCAT(?agNamespace, str(?costsplit))) AS ?cost_uri).
+}
+
+CONSTRUCT {
+
+?card ag:costsOptionally ?optionsplit_uri
+}
+
+WHERE {
+
+BIND (str(tarql:expandPrefix("agdb")) AS ?agdbNamespace).
+BIND (str(tarql:expandPrefix("ag")) AS ?agNamespace).
+BIND (URI(CONCAT(?agdbNamespace, str(?name))) AS ?card).
+
+?optionsplit apf:strSplit (?optioncost ";").
+BIND (URI(CONCAT(?agNamespace, str(?optionsplit))) AS ?optionsplit_uri).
+}
+
+CONSTRUCT {
+
+?card ag:requires ?prereq_uri
+}
+
+WHERE {
+
+BIND (str(tarql:expandPrefix("agdb")) AS ?agdbNamespace).
+BIND (str(tarql:expandPrefix("ag")) AS ?agNamespace).
+BIND (URI(CONCAT(?agdbNamespace, str(?name))) AS ?card).
+
+?prereqsplit apf:strSplit (?prereq ";").
+BIND (URI(CONCAT(?agNamespace, str(?prereqsplit))) AS ?prereq_uri).
+}
+
+CONSTRUCT {
+
+?card ag:categorizedBy ?cat_uri
+}
+
+WHERE {
+
+BIND (str(tarql:expandPrefix("agdb")) AS ?agdbNamespace).
+BIND (str(tarql:expandPrefix("ag")) AS ?agNamespace).
+BIND (URI(CONCAT(?agdbNamespace, str(?name))) AS ?card).
+
+?catsplit apf:strSplit (?category ";").
+BIND (URI(CONCAT(?agNamespace, str(?catsplit))) AS ?cat_uri).
+}
+
+CONSTRUCT {
+
+?card ag:provides ?give_uri
+}
+
+WHERE {
+
+BIND (str(tarql:expandPrefix("agdb")) AS ?agdbNamespace).
+BIND (str(tarql:expandPrefix("ag")) AS ?agNamespace).
+BIND (URI(CONCAT(?agdbNamespace, str(?name))) AS ?card).
+
+?givesplit apf:strSplit (?provides ";").
+BIND (URI(CONCAT(?agNamespace, str(?givesplit))) AS ?give_uri).
+}
+
+CONSTRUCT {
+
+?card ag:alters ?change_uri
+}
+
+WHERE {
+
+BIND (str(tarql:expandPrefix("agdb")) AS ?agdbNamespace).
+BIND (str(tarql:expandPrefix("ag")) AS ?agNamespace).
+BIND (URI(CONCAT(?agdbNamespace, str(?name))) AS ?card).
+
+?changesplit apf:strSplit (?alters ";").
+BIND (URI(CONCAT(?agNamespace, str(?changesplit))) AS ?change_uri).
+}
+
+CONSTRUCT {
+
+?card ag:addstoFuture ?add_uri
+}
+
+WHERE {
+
+BIND (str(tarql:expandPrefix("agdb")) AS ?agdbNamespace).
+BIND (str(tarql:expandPrefix("ag")) AS ?agNamespace).
+BIND (URI(CONCAT(?agdbNamespace, str(?name))) AS ?card).
+
+?addsplit apf:strSplit (?addsfuture ";").
+BIND (URI(CONCAT(?agNamespace, str(?addsplit))) AS ?add_uri).
+}
+
+
