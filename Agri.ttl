@@ -13,6 +13,11 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/danielhadad/AgriGame#addsToFarm
+:addsToFarm rdf:type owl:ObjectProperty ;
+            rdfs:comment "As the result of a player's turn, the player adds some game element to their board." .
+
+
 ###  http://www.semanticweb.org/danielhadad/AgriGame#addsToFuture
 :addsToFuture rdf:type owl:ObjectProperty ;
               rdfs:comment "Some cards have the effect of adding items to the start of future rounds." .
